@@ -23,6 +23,8 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithRed:1.000 green:0.145 blue:0.572 alpha:1.000];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,7 +38,7 @@
 {
     UISegmentedControl *control = (UISegmentedControl *)sender;
     
-    [UIView transitionWithView:viewContent duration:0.3 options:UIViewAnimationOptionTransitionCurlDown animations:^{
+    [UIView transitionWithView:viewContent duration:0.3 options:UIViewAnimationOptionTransitionNone animations:^{
         viewContent.backgroundColor = viewContent.backgroundColor == [UIColor whiteColor] ? [UIColor orangeColor] : [UIColor whiteColor];
     } completion:nil];
 }

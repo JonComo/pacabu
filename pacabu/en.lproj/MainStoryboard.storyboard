@@ -43,21 +43,21 @@
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-f8-KBx">
-                                <color key="backgroundColor" red="0.80183489079033621" green="0.74412120353484457" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.14471035035118363" blue="0.5720623798510639" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uAk-f8-KBx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="178" id="49T-YA-Ucs"/>
                             <constraint firstItem="SVq-ga-MHj" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="8Bz-L2-lnU"/>
-                            <constraint firstAttribute="trailing" secondItem="uAk-f8-KBx" secondAttribute="trailing" constant="73" id="9en-sQ-wlD"/>
                             <constraint firstItem="SVq-ga-MHj" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="InV-8J-kkF"/>
                             <constraint firstItem="DBc-Zs-HfO" firstAttribute="top" secondItem="3" secondAttribute="top" type="user" id="b4u-xi-FUr"/>
-                            <constraint firstItem="uAk-f8-KBx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="194" id="bbq-y0-0V3"/>
-                            <constraint firstAttribute="bottom" secondItem="uAk-f8-KBx" secondAttribute="bottom" constant="289" id="kIT-fZ-Dur"/>
+                            <constraint firstItem="uAk-f8-KBx" firstAttribute="top" secondItem="DBc-Zs-HfO" secondAttribute="bottom" type="default" id="hka-Qw-44f"/>
                             <constraint firstItem="SVq-ga-MHj" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="kiz-1a-I4b"/>
+                            <constraint firstItem="uAk-f8-KBx" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="rtt-kV-hlf"/>
                             <constraint firstItem="DBc-Zs-HfO" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="uO9-8Y-htQ"/>
                             <constraint firstItem="DBc-Zs-HfO" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="uR3-cF-d1r"/>
+                            <constraint firstItem="uAk-f8-KBx" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="xEq-TD-y9M"/>
+                            <constraint firstItem="SVq-ga-MHj" firstAttribute="top" secondItem="uAk-f8-KBx" secondAttribute="bottom" type="default" id="xxE-Ls-uzK"/>
                         </constraints>
                     </view>
                     <connections>
