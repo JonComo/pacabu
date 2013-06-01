@@ -36,6 +36,7 @@
 		33D9E0DB175862CB00D4B561 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DA175862CB00D4B561 /* StoreKit.framework */; };
 		33D9E0DD175862D100D4B561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */; };
 		33D9E0E41758678F00D4B561 /* PBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D9E0E31758678F00D4B561 /* PBAccountViewController.m */; };
+		86D9A497175AB5FE005758D9 /* CellActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D9A496175AB5FE005758D9 /* CellActivity.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		33D9E0E21758678F00D4B561 /* PBAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAccountViewController.h; sourceTree = "<group>"; };
 		33D9E0E31758678F00D4B561 /* PBAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAccountViewController.m; sourceTree = "<group>"; };
+		86D9A496175AB5FE005758D9 /* CellActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellActivity.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				335DE689175871C700C87D00 /* PBPacabuDetailViewController.m */,
 				335DE69A1758746C00C87D00 /* PBCalendarViewController.h */,
 				335DE69B1758746C00C87D00 /* PBCalendarViewController.m */,
+				86D9A496175AB5FE005758D9 /* CellActivity.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				33D9E0BC17585FF800D4B561 /* Default@2x.png in Resources */,
 				33D9E0BE17585FF800D4B561 /* Default-568h@2x.png in Resources */,
 				33D9E0C117585FF800D4B561 /* MainStoryboard.storyboard in Resources */,
+				86D9A497175AB5FE005758D9 /* CellActivity.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
