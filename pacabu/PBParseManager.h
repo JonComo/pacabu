@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class PFQuery;
+@class PFObject;
 
 @interface PBParseManager : NSObject
 
 +(PBParseManager *)sharedManager;
 
 -(void)runQuery:(PFQuery *)query completion:(void (^)(BOOL success, NSArray *objects))block;
+-(void)saveObject:(PFObject *)object completion:(void (^)(BOOL success))block;
 
 @end

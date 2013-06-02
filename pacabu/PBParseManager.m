@@ -24,6 +24,13 @@
     return sharedManager;
 }
 
+-(void)saveObject:(PFObject *)object completion:(void (^)(BOOL success))block
+{
+    [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (block) block(succeeded);
+    }];
+}
+
 -(void)runQuery:(PFQuery *)query completion:(void (^)(BOOL success, NSArray *objects))block
 {
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

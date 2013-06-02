@@ -40,6 +40,7 @@
 		86D9A49A175AB773005758D9 /* PBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A499175AB773005758D9 /* PBManager.m */; };
 		86D9A49E175AB904005758D9 /* PBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A49D175AB904005758D9 /* PBParseManager.m */; };
 		86D9A4A4175ABAC8005758D9 /* JCAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A3175ABAC8005758D9 /* JCAlertViewManager.m */; };
+		86D9A4A7175ABF51005758D9 /* PBActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A6175ABF51005758D9 /* PBActivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,8 @@
 		86D9A49D175AB904005758D9 /* PBParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBParseManager.m; sourceTree = "<group>"; };
 		86D9A4A2175ABAC8005758D9 /* JCAlertViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCAlertViewManager.h; sourceTree = "<group>"; };
 		86D9A4A3175ABAC8005758D9 /* JCAlertViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCAlertViewManager.m; sourceTree = "<group>"; };
+		86D9A4A5175ABF51005758D9 /* PBActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBActivity.h; sourceTree = "<group>"; };
+		86D9A4A6175ABF51005758D9 /* PBActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBActivity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +232,8 @@
 				86D9A499175AB773005758D9 /* PBManager.m */,
 				86D9A49C175AB904005758D9 /* PBParseManager.h */,
 				86D9A49D175AB904005758D9 /* PBParseManager.m */,
+				86D9A4A5175ABF51005758D9 /* PBActivity.h */,
+				86D9A4A6175ABF51005758D9 /* PBActivity.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				86D9A49A175AB773005758D9 /* PBManager.m in Sources */,
 				86D9A49E175AB904005758D9 /* PBParseManager.m in Sources */,
 				86D9A4A4175ABAC8005758D9 /* JCAlertViewManager.m in Sources */,
+				86D9A4A7175ABF51005758D9 /* PBActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
