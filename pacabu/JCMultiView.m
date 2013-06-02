@@ -71,6 +71,11 @@
     UIView *viewToDisplay = [self viewAtIndex:index];
     viewToDisplay.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     
+    UIView *viewToHide;
+    
+    if (self.subviews.count != 0)
+        viewToHide = self.subviews[0];
+    
     [self addSubview:viewToDisplay];
     
     int offset = self.frame.size.width;
@@ -81,6 +86,9 @@
     
     [UIView animateWithDuration:0.3 animations:^{
         viewToDisplay.transform = CGAffineTransformIdentity;
+        viewToHide.transform = CGAffineTransformTranslate(viewToHide.transform, -offset, 0);
+    } completion:^(BOOL finished) {
+        [viewToHide removeFromSuperview];
     }];
     
     previousIndex = index;
