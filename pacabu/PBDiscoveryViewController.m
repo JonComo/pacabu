@@ -7,32 +7,34 @@
 //
 
 #import "PBDiscoveryViewController.h"
+#import "JCMultiView.h"
 
 @interface PBDiscoveryViewController ()
+{
+    __weak IBOutlet JCMultiView *multiView;
+}
 
 @end
 
 @implementation PBDiscoveryViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    multiView.nibNames = @[@"ViewList", @"ViewMap"];
+    [multiView setVisibleView:0];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)changeView:(UISegmentedControl *)sender {
+    [multiView setVisibleView:sender.selectedSegmentIndex];
 }
 
 @end

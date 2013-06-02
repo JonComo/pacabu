@@ -36,6 +36,9 @@
 		86D9A4AA175AC6BB005758D9 /* PBDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */; };
 		86D9A4AD175AC86E005758D9 /* PBActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4AC175AC86E005758D9 /* PBActivity.m */; };
 		86D9A4B0175AD69E005758D9 /* JCMultiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4AF175AD69E005758D9 /* JCMultiView.m */; };
+		86D9A4B2175AE030005758D9 /* ViewMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D9A4B1175AE030005758D9 /* ViewMap.xib */; };
+		86D9A4B4175AE1CE005758D9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D9A4B3175AE1CE005758D9 /* MapKit.framework */; };
+		86D9A4B6175AE4FF005758D9 /* ViewList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D9A4B5175AE4FF005758D9 /* ViewList.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,9 @@
 		86D9A4AC175AC86E005758D9 /* PBActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBActivity.m; sourceTree = "<group>"; };
 		86D9A4AE175AD69E005758D9 /* JCMultiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMultiView.h; sourceTree = "<group>"; };
 		86D9A4AF175AD69E005758D9 /* JCMultiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMultiView.m; sourceTree = "<group>"; };
+		86D9A4B1175AE030005758D9 /* ViewMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewMap.xib; sourceTree = "<group>"; };
+		86D9A4B3175AE1CE005758D9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		86D9A4B5175AE4FF005758D9 /* ViewList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewList.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D9A4B4175AE1CE005758D9 /* MapKit.framework in Frameworks */,
 				33D9E0DD175862D100D4B561 /* SystemConfiguration.framework in Frameworks */,
 				33D9E0DB175862CB00D4B561 /* StoreKit.framework in Frameworks */,
 				33D9E0D9175862C600D4B561 /* Security.framework in Frameworks */,
@@ -126,6 +133,7 @@
 		33D9E0A617585FF800D4B561 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				86D9A4B3175AE1CE005758D9 /* MapKit.framework */,
 				33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */,
 				33D9E0DA175862CB00D4B561 /* StoreKit.framework */,
 				33D9E0D8175862C600D4B561 /* Security.framework */,
@@ -182,6 +190,8 @@
 				86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */,
 				86D9A4AE175AD69E005758D9 /* JCMultiView.h */,
 				86D9A4AF175AD69E005758D9 /* JCMultiView.m */,
+				86D9A4B1175AE030005758D9 /* ViewMap.xib */,
+				86D9A4B5175AE4FF005758D9 /* ViewList.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -259,6 +269,8 @@
 				33D9E0BE17585FF800D4B561 /* Default-568h@2x.png in Resources */,
 				33D9E0C117585FF800D4B561 /* MainStoryboard.storyboard in Resources */,
 				86D9A497175AB5FE005758D9 /* CellActivity.xib in Resources */,
+				86D9A4B2175AE030005758D9 /* ViewMap.xib in Resources */,
+				86D9A4B6175AE4FF005758D9 /* ViewList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

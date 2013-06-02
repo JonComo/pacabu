@@ -10,4 +10,9 @@
 
 @interface JCMultiView : UIView
 
+@property (nonatomic, strong) NSArray *nibNames;
+@property u_int currentIndex;
+
+-(void)setVisibleView:(int)index;
+
 @end

@@ -35,11 +35,14 @@
                                                 <segment title="Popular"/>
                                             </segments>
                                             <color key="tintColor" red="0.20652418870192313" green="0.20652418870192313" blue="0.20652418870192313" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="changeView:" destination="2" eventType="valueChanged" id="26d-et-vzT"/>
+                                            </connections>
                                         </segmentedControl>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-f8-KBx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-f8-KBx" customClass="JCMultiView">
                                 <color key="backgroundColor" red="1" green="0.14471035035118363" blue="0.5720623798510639" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -57,10 +60,13 @@
                             <constraint firstItem="SVq-ga-MHj" firstAttribute="top" secondItem="uAk-f8-KBx" secondAttribute="bottom" type="default" id="xxE-Ls-uzK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="multiView" destination="uAk-f8-KBx" id="I2W-lU-gPR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="-79"/>
+            <point key="canvasLocation" x="793" y="-79"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="oa8-cr-4Wz">
@@ -207,21 +213,23 @@
         </scene>
     </scenes>
     <classes>
+        <class className="JCMultiView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JCMultiView.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="PBAccountViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBAccountViewController.h"/>
             <relationships>
-                <relationship kind="action" name="close:"/>
-                <relationship kind="action" name="createAccount:"/>
-                <relationship kind="action" name="signIn:"/>
-                <relationship kind="action" name="signOut:"/>
                 <relationship kind="outlet" name="labelUser" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="PBDiscoveryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBDiscoveryViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="multiView" candidateClass="JCMultiView"/>
+            </relationships>
         </class>
         <class className="PBProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBProfileViewController.h"/>
