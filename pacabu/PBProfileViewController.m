@@ -7,9 +7,6 @@
 //
 
 #import "PBProfileViewController.h"
-#import "PBPacabuDetailViewController.h"
-#import <Parse/PF_MBProgressHUD.h>
-#import <Parse/Parse.h>
 
 @interface PBProfileViewController ()
 
@@ -36,17 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)newPacabu:(id)sender
-{
-    PFObject *pacabu = [PFObject objectWithClassName:@"pacabu"];
-    
-    PBPacabuDetailViewController *detailsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"pacabuDetailsVC"];
-    
-    detailsVC.pacabu = pacabu;
-    
-    [self presentViewController:detailsVC animated:YES completion:nil];
 }
 
 - (IBAction)close:(id)sender

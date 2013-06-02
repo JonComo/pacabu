@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Discovery View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="PBViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="PBDiscoveryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,69 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="81"/>
-        </scene>
-        <!--Pacabu Detail View Controller-->
-        <scene sceneID="Xma-bP-UAN">
-            <objects>
-                <viewController storyboardIdentifier="pacabuDetailsVC" id="NEN-4t-xUi" customClass="PBPacabuDetailViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uvr-SI-qa1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSE-zJ-ig5">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Calendar">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="imo-8S-sVT" kind="modal" id="InE-jn-CKU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vk-Sa-IcG">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="close:" destination="NEN-4t-xUi" eventType="touchUpInside" id="HUw-B2-QaG"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="lSE-zJ-ig5" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="LwB-ei-12f"/>
-                            <constraint firstItem="lSE-zJ-ig5" firstAttribute="centerX" secondItem="uvr-SI-qa1" secondAttribute="centerX" type="default" id="hWN-Fi-hMm"/>
-                            <constraint firstItem="6vk-Sa-IcG" firstAttribute="top" secondItem="uvr-SI-qa1" secondAttribute="top" constant="20" symbolic="YES" type="default" id="oFK-2n-JXY"/>
-                            <constraint firstItem="6vk-Sa-IcG" firstAttribute="leading" secondItem="uvr-SI-qa1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pf3-0W-bNs"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Coh-9H-JMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1207" y="457"/>
-        </scene>
-        <!--Calendar View Controller-->
-        <scene sceneID="u5f-7n-4bs">
-            <objects>
-                <viewController id="imo-8S-sVT" customClass="PBCalendarViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cGG-yI-pze">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NyJ-kw-B6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1616" y="457"/>
+            <point key="canvasLocation" x="768" y="-79"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="oa8-cr-4Wz">
@@ -219,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UO-zt-icU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1662" y="-273"/>
+            <point key="canvasLocation" x="1676" y="-79"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="5az-M5-fn8">
@@ -245,34 +183,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrU-yO-oUC">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="pacabu">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="newPacabu:" destination="xjR-GL-1dO" eventType="touchUpInside" id="Ibi-ed-AO6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h32-wF-rTh" firstAttribute="top" secondItem="9na-P2-pR1" secondAttribute="top" type="default" id="0ze-XH-S9U"/>
                             <constraint firstItem="h32-wF-rTh" firstAttribute="trailing" secondItem="9na-P2-pR1" secondAttribute="trailing" type="default" id="3Ke-tf-RvB"/>
-                            <constraint firstItem="RrU-yO-oUC" firstAttribute="leading" secondItem="9na-P2-pR1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="5pZ-zv-P8n"/>
                             <constraint firstItem="h32-wF-rTh" firstAttribute="leading" secondItem="9na-P2-pR1" secondAttribute="leading" type="default" id="I2q-Dk-NEO"/>
-                            <constraint firstAttribute="bottom" secondItem="RrU-yO-oUC" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Z6c-Cg-XhB"/>
-                            <constraint firstAttribute="trailing" secondItem="RrU-yO-oUC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="esj-md-EJ9"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIE-GJ-SKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="-273"/>
+            <point key="canvasLocation" x="1221" y="-79"/>
         </scene>
     </scenes>
     <classes>
@@ -282,30 +204,20 @@
         <class className="PBAccountViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBAccountViewController.h"/>
             <relationships>
+                <relationship kind="action" name="close:"/>
+                <relationship kind="action" name="createAccount:"/>
+                <relationship kind="action" name="signIn:"/>
+                <relationship kind="action" name="signOut:"/>
                 <relationship kind="outlet" name="labelUser" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="PBCalendarViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBCalendarViewController.h"/>
-        </class>
-        <class className="PBPacabuDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBPacabuDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="close:"/>
-            </relationships>
+        <class className="PBDiscoveryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBDiscoveryViewController.h"/>
         </class>
         <class className="PBProfileViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBProfileViewController.h"/>
             <relationships>
                 <relationship kind="action" name="close:"/>
-                <relationship kind="action" name="newPacabu:"/>
-            </relationships>
-        </class>
-        <class className="PBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changeView:"/>
-                <relationship kind="outlet" name="viewContent" candidateClass="UIView"/>
             </relationships>
         </class>
     </classes>
