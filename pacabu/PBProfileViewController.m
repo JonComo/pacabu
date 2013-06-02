@@ -7,6 +7,7 @@
 //
 
 #import "PBProfileViewController.h"
+#import "PBActivity.h"
 
 @interface PBProfileViewController ()
 
@@ -38,6 +39,15 @@
 - (IBAction)close:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)new:(id)sender
+{
+    PBActivity *newActivity = [PBActivity new];
+    
+    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"Saved");
+    }];
 }
 
 @end

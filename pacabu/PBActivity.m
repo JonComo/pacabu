@@ -8,36 +8,22 @@
 
 #import "PBActivity.h"
 #import "PBParseManager.h"
-#import <Parse/Parse.h>
 
 @implementation PBActivity
 
--(id)init
++(PBActivity *)new
 {
-    if (self = [super init]) {
-        //init
-        
-        _object = [PFObject objectWithClassName:@"Activity"];
-        [_object setObject:[PFUser currentUser] forKey:@"user"];
-    }
+    PBActivity *newActivity = [[self alloc] initWithClassName:@"Activity"];
     
-    return self;
-}
-
--(id)initWithObject:(PFObject *)object
-{
-    if (self = [super init]) {
-        //init
-        
-        _object = object;
-    }
+    if ([PFUser currentUser])
+        [newActivity setObject:[PFUser currentUser] forKey:@"user"];
     
-    return self;
+    return newActivity;
 }
 
 -(void)saveCompletion:(void (^)(BOOL success))block
 {
-    [[PBParseManager sharedManager] saveObject:self.object completion:block];
+    [[PBParseManager sharedManager] saveObject:self completion:block];
 }
 
 @end

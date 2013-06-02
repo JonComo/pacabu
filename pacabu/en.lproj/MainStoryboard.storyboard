@@ -35,9 +35,6 @@
                                                 <segment title="Popular"/>
                                             </segments>
                                             <color key="tintColor" red="0.20652418870192313" green="0.20652418870192313" blue="0.20652418870192313" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="changeView:" destination="2" eventType="valueChanged" id="9u8-Sz-S8n"/>
-                                            </connections>
                                         </segmentedControl>
                                     </barButtonItem>
                                 </items>
@@ -60,9 +57,6 @@
                             <constraint firstItem="SVq-ga-MHj" firstAttribute="top" secondItem="uAk-f8-KBx" secondAttribute="bottom" type="default" id="xxE-Ls-uzK"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="viewContent" destination="uAk-f8-KBx" id="28X-3F-pXn"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,12 +177,27 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-Bh-GCR">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="New">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="new:" destination="xjR-GL-1dO" eventType="touchUpInside" id="i8I-gp-ipc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h32-wF-rTh" firstAttribute="top" secondItem="9na-P2-pR1" secondAttribute="top" type="default" id="0ze-XH-S9U"/>
                             <constraint firstItem="h32-wF-rTh" firstAttribute="trailing" secondItem="9na-P2-pR1" secondAttribute="trailing" type="default" id="3Ke-tf-RvB"/>
+                            <constraint firstItem="Kta-Bh-GCR" firstAttribute="centerX" secondItem="h32-wF-rTh" secondAttribute="centerX" type="default" id="FtJ-GF-BfN"/>
                             <constraint firstItem="h32-wF-rTh" firstAttribute="leading" secondItem="9na-P2-pR1" secondAttribute="leading" type="default" id="I2q-Dk-NEO"/>
+                            <constraint firstAttribute="bottom" secondItem="Kta-Bh-GCR" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="nUz-5r-8eS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -218,6 +227,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBProfileViewController.h"/>
             <relationships>
                 <relationship kind="action" name="close:"/>
+                <relationship kind="action" name="new:"/>
             </relationships>
         </class>
     </classes>
