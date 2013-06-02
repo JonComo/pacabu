@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "_default": {
+            "link": "pacabu"
+        }, 
+        "pacabu": {
+            "applicationId": "fnOkCA82y0EBUaemIH0DaGIghugZh7EUfVzILWSx", 
+            "masterKey": "lIcH6QZDAwIg8nPPjGwXzMXfAAr5vdNFRy5CRda2"
+        }
+    }
+}
