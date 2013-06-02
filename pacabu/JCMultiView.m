@@ -88,8 +88,10 @@
         viewToDisplay.transform = CGAffineTransformIdentity;
         viewToHide.transform = CGAffineTransformTranslate(viewToHide.transform, -offset, 0);
     } completion:^(BOOL finished) {
-        [viewToHide removeFromSuperview];
+        //[viewToHide removeFromSuperview];
     }];
+    
+    NSLog(@"SUbviews: %i", self.subviews.count);
     
     previousIndex = index;
 }
