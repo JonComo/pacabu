@@ -12,6 +12,9 @@
 {
     u_int previousIndex;
     NSMutableDictionary *views;
+    
+    UIView *viewToDisplay;
+    UIView *viewToHide;
 }
 
 -(void)setNibNames:(NSArray *)nibNames
@@ -36,13 +39,13 @@
     
     if (!returnView)
     {
-        returnView = [self viewFromNibName:nibName];
+        returnView = [self viewForNibName:nibName];
     }
     
     return returnView;
 }
 
--(UIView *)viewFromNibName:(NSString *)nibName
+-(UIView *)viewForNibName:(NSString *)nibName
 {
     UIView *view = [[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil][0];
     view.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
@@ -68,89 +71,14 @@
     
     self.currentIndex = index;
     
-    UIView *viewToDisplay = [self viewAtIndex:index];
-    viewToDisplay.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
-    
-    UIView *viewToHide;
-    
-    if (self.subviews.count != 0)
-        viewToHide = self.subviews[0];
-    
-    [self addSubview:viewToDisplay];
-    
-    int offset = self.frame.size.width;
-    
-    if (previousIndex > index) offset *= -1;
-    
-    viewToDisplay.transform = CGAffineTransformMakeTranslation(offset, 0);
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        viewToDisplay.transform = CGAffineTransformIdentity;
-        viewToHide.transform = CGAffineTransformTranslate(viewToHide.transform, -offset, 0);
-    } completion:^(BOOL finished) {
-        //[viewToHide removeFromSuperview];
-    }];
-    
-    NSLog(@"SUbviews: %i", self.subviews.count);
-    
-    previousIndex = index;
-}
-
-/*
--(void)setVisibleView:(int)index
-{
-    if (index < 0 || index > self.nibNames.count - 1)
-        return;
-    
-    if (self.currentIndex == index && self.subviews.count != 0)
-        return;
-    
-    self.currentIndex = index;
-    
-    UIView *viewToDisplay;
-    UIView *viewToRemove;
+    for (UIView *subview in self.subviews)
+        [subview removeFromSuperview];
     
     viewToDisplay = [self viewAtIndex:index];
-    
-    if (!viewToDisplay)
-    {
-        viewToDisplay = [self viewFromNibName:self.nibNames[index]];
-        
-        views[self.nibNames[index]] = viewToDisplay;
-    }
-    
-    //If there isn't a view to transition from just add the selected initial view
-    
-    if (self.subviews.count == 0)
-    {
-        [self addSubview:viewToDisplay];
-    }else{
-        //Otherwise animate the transition
-        
-        viewToRemove = self.subviews[0];
-        
-        [self addSubview:viewToDisplay];
-        
-        int offset = viewToRemove.frame.size.width;
-        
-        if (previousIndex > index)
-            offset *= -1;
-        
-        viewToDisplay.transform = CGAffineTransformMakeTranslation(offset, 0);
-        
-        [UIView animateWithDuration:0.3 animations:^{
-            isAnimating = YES;
-            viewToRemove.transform = CGAffineTransformTranslate(viewToRemove.transform, -offset, 0);
-            viewToDisplay.transform = CGAffineTransformTranslate(viewToDisplay.transform, -offset, 0);
-        } completion:^(BOOL finished) {
-            [viewToRemove removeFromSuperview];
-            isAnimating = NO;
-        }];
-    }
+    [self addSubview:viewToDisplay];
     
     previousIndex = index;
 }
- */
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
