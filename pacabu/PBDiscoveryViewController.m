@@ -1,19 +1,18 @@
 //
-//  PBPacabuDetailViewController.m
+//  PBDiscoveryViewController.m
 //  pacabu
 //
-//  Created by David de Jesus on 5/30/13.
+//  Created by Jon Como on 6/1/13.
 //  Copyright (c) 2013 DKJ. All rights reserved.
 //
 
-#import "PBPacabuDetailViewController.h"
-#import <Parse/Parse.h>
+#import "PBDiscoveryViewController.h"
 
-@interface PBPacabuDetailViewController ()
+@interface PBDiscoveryViewController ()
 
 @end
 
-@implementation PBPacabuDetailViewController
+@implementation PBDiscoveryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,11 +34,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)close:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 
 @end
