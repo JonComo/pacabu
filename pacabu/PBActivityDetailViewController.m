@@ -7,9 +7,14 @@
 //
 
 #import "PBActivityDetailViewController.h"
+#import "PBBillSummaryViewController.h"
 #import "PBActivity.h"
 
 @interface PBActivityDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+{
+    __weak IBOutlet UIButton *bookButton;
+    
+}
 
 @end
 
@@ -27,7 +32,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Blah" style:UIBarButtonItemStylePlain target:self action:@selector(shareActivity)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
+    
+    
+}
+
+- (void)shareActivity
+{
+    
+}
+
+- (IBAction)book:(id)sender
+{
+    UIStoryboard *secondSB = [UIStoryboard storyboardWithName:@"SecondaryStoryboard" bundle:[NSBundle mainBundle]];
+    PBBillSummaryViewController *billVC = [secondSB instantiateViewControllerWithIdentifier:@"SummaryVC"];
+    billVC.activity = self.activity;
+    [self.navigationController pushViewController:billVC animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

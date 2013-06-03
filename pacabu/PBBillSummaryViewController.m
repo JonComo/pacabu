@@ -27,7 +27,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Blah" style:UIBarButtonItemStylePlain target:self action:@selector(callHost)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
+}
+
+- (void)callHost
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
