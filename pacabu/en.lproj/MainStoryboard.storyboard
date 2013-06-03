@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xGq-Ko-fLW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Discovery View Controller - Home-->
+        <!--Discovery View Controller - Discovery-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="PBDiscoveryViewController" sceneMemberID="viewController">
@@ -24,46 +24,15 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="SVq-ga-MHj">
-                                <items>
-                                    <barButtonItem style="plain" id="hjQ-0j-IuZ">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="6DC-Ce-MIH">
-                                            <rect key="frame" x="6" y="8" width="307" height="31"/>
-                                            <segments>
-                                                <segment title="List"/>
-                                                <segment title="Map"/>
-                                                <segment title="Popular"/>
-                                            </segments>
-                                            <color key="tintColor" red="0.20652418870192313" green="0.20652418870192313" blue="0.20652418870192313" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="changeView:" destination="2" eventType="valueChanged" id="26d-et-vzT"/>
-                                            </connections>
-                                        </segmentedControl>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAk-f8-KBx" customClass="JCMultiView">
-                                <color key="backgroundColor" red="1" green="0.14471035035118363" blue="0.5720623798510639" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SVq-ga-MHj" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="8Bz-L2-lnU"/>
-                            <constraint firstItem="SVq-ga-MHj" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="InV-8J-kkF"/>
                             <constraint firstItem="DBc-Zs-HfO" firstAttribute="top" secondItem="3" secondAttribute="top" type="user" id="b4u-xi-FUr"/>
-                            <constraint firstItem="uAk-f8-KBx" firstAttribute="top" secondItem="DBc-Zs-HfO" secondAttribute="bottom" type="default" id="hka-Qw-44f"/>
-                            <constraint firstItem="SVq-ga-MHj" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="kiz-1a-I4b"/>
-                            <constraint firstItem="uAk-f8-KBx" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="rtt-kV-hlf"/>
                             <constraint firstItem="DBc-Zs-HfO" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="uO9-8Y-htQ"/>
                             <constraint firstItem="DBc-Zs-HfO" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="uR3-cF-d1r"/>
-                            <constraint firstItem="uAk-f8-KBx" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="xEq-TD-y9M"/>
-                            <constraint firstItem="SVq-ga-MHj" firstAttribute="top" secondItem="uAk-f8-KBx" secondAttribute="bottom" type="default" id="xxE-Ls-uzK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="ea2-nU-8fs"/>
-                    <connections>
-                        <outlet property="multiView" destination="uAk-f8-KBx" id="I2W-lU-gPR"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Discovery" id="ea2-nU-8fs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +54,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNV-kZ-AqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="-79"/>
+            <point key="canvasLocation" x="356" y="-79"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="oa8-cr-4Wz">
@@ -176,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UO-zt-icU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-79"/>
+            <point key="canvasLocation" x="1642" y="-79"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="5az-M5-fn8">
@@ -232,9 +201,6 @@
         </scene>
     </scenes>
     <classes>
-        <class className="JCMultiView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JCMultiView.h"/>
-        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>

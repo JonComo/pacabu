@@ -30,18 +30,14 @@
 		33D9E0DB175862CB00D4B561 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DA175862CB00D4B561 /* StoreKit.framework */; };
 		33D9E0DD175862D100D4B561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */; };
 		33D9E0E41758678F00D4B561 /* PBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D9E0E31758678F00D4B561 /* PBAccountViewController.m */; };
-		8632CD71175C105100A954D1 /* PBListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD70175C105100A954D1 /* PBListView.m */; };
 		8632CD73175C166000A954D1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD72175C166000A954D1 /* icon@2x.png */; };
-		86D9A497175AB5FE005758D9 /* CellActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D9A496175AB5FE005758D9 /* CellActivity.xib */; };
+		8632CD76175C2DD200A954D1 /* PBGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD75175C2DD200A954D1 /* PBGraphics.m */; };
 		86D9A49A175AB773005758D9 /* PBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A499175AB773005758D9 /* PBManager.m */; };
 		86D9A49E175AB904005758D9 /* PBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A49D175AB904005758D9 /* PBParseManager.m */; };
 		86D9A4A4175ABAC8005758D9 /* JCAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A3175ABAC8005758D9 /* JCAlertViewManager.m */; };
 		86D9A4AA175AC6BB005758D9 /* PBDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */; };
 		86D9A4AD175AC86E005758D9 /* PBActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4AC175AC86E005758D9 /* PBActivity.m */; };
-		86D9A4B0175AD69E005758D9 /* JCMultiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4AF175AD69E005758D9 /* JCMultiView.m */; };
-		86D9A4B2175AE030005758D9 /* ViewMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D9A4B1175AE030005758D9 /* ViewMap.xib */; };
 		86D9A4B4175AE1CE005758D9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D9A4B3175AE1CE005758D9 /* MapKit.framework */; };
-		86D9A4B6175AE4FF005758D9 /* ViewList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D9A4B5175AE4FF005758D9 /* ViewList.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,10 +70,9 @@
 		33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		33D9E0E21758678F00D4B561 /* PBAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAccountViewController.h; sourceTree = "<group>"; };
 		33D9E0E31758678F00D4B561 /* PBAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAccountViewController.m; sourceTree = "<group>"; };
-		8632CD6F175C105100A954D1 /* PBListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBListView.h; sourceTree = "<group>"; };
-		8632CD70175C105100A954D1 /* PBListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBListView.m; sourceTree = "<group>"; };
 		8632CD72175C166000A954D1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		86D9A496175AB5FE005758D9 /* CellActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellActivity.xib; sourceTree = "<group>"; };
+		8632CD74175C2DD200A954D1 /* PBGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGraphics.h; sourceTree = "<group>"; };
+		8632CD75175C2DD200A954D1 /* PBGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGraphics.m; sourceTree = "<group>"; };
 		86D9A498175AB773005758D9 /* PBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBManager.h; sourceTree = "<group>"; };
 		86D9A499175AB773005758D9 /* PBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBManager.m; sourceTree = "<group>"; };
 		86D9A49C175AB904005758D9 /* PBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParseManager.h; sourceTree = "<group>"; };
@@ -88,11 +83,7 @@
 		86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiscoveryViewController.m; sourceTree = "<group>"; };
 		86D9A4AB175AC86E005758D9 /* PBActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBActivity.h; sourceTree = "<group>"; };
 		86D9A4AC175AC86E005758D9 /* PBActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBActivity.m; sourceTree = "<group>"; };
-		86D9A4AE175AD69E005758D9 /* JCMultiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMultiView.h; sourceTree = "<group>"; };
-		86D9A4AF175AD69E005758D9 /* JCMultiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMultiView.m; sourceTree = "<group>"; };
-		86D9A4B1175AE030005758D9 /* ViewMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewMap.xib; sourceTree = "<group>"; };
 		86D9A4B3175AE1CE005758D9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		86D9A4B5175AE4FF005758D9 /* ViewList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewList.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,13 +187,6 @@
 				335DE68617586D9800C87D00 /* PBProfileViewController.m */,
 				86D9A4A8175AC6BB005758D9 /* PBDiscoveryViewController.h */,
 				86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */,
-				86D9A4AE175AD69E005758D9 /* JCMultiView.h */,
-				86D9A4AF175AD69E005758D9 /* JCMultiView.m */,
-				86D9A4B1175AE030005758D9 /* ViewMap.xib */,
-				86D9A4B5175AE4FF005758D9 /* ViewList.xib */,
-				86D9A496175AB5FE005758D9 /* CellActivity.xib */,
-				8632CD6F175C105100A954D1 /* PBListView.h */,
-				8632CD70175C105100A954D1 /* PBListView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -218,6 +202,8 @@
 				86D9A49D175AB904005758D9 /* PBParseManager.m */,
 				86D9A4AB175AC86E005758D9 /* PBActivity.h */,
 				86D9A4AC175AC86E005758D9 /* PBActivity.m */,
+				8632CD74175C2DD200A954D1 /* PBGraphics.h */,
+				8632CD75175C2DD200A954D1 /* PBGraphics.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -279,9 +265,6 @@
 				33D9E0BC17585FF800D4B561 /* Default@2x.png in Resources */,
 				33D9E0BE17585FF800D4B561 /* Default-568h@2x.png in Resources */,
 				33D9E0C117585FF800D4B561 /* MainStoryboard.storyboard in Resources */,
-				86D9A497175AB5FE005758D9 /* CellActivity.xib in Resources */,
-				86D9A4B2175AE030005758D9 /* ViewMap.xib in Resources */,
-				86D9A4B6175AE4FF005758D9 /* ViewList.xib in Resources */,
 				8632CD73175C166000A954D1 /* icon@2x.png in Resources */,
 				3308A9A3175C2DBB004B5F16 /* user_profile.storyboard in Resources */,
 			);
@@ -303,8 +286,7 @@
 				86D9A4A4175ABAC8005758D9 /* JCAlertViewManager.m in Sources */,
 				86D9A4AA175AC6BB005758D9 /* PBDiscoveryViewController.m in Sources */,
 				86D9A4AD175AC86E005758D9 /* PBActivity.m in Sources */,
-				86D9A4B0175AD69E005758D9 /* JCMultiView.m in Sources */,
-				8632CD71175C105100A954D1 /* PBListView.m in Sources */,
+				8632CD76175C2DD200A954D1 /* PBGraphics.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

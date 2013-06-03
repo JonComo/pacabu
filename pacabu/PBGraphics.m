@@ -10,4 +10,9 @@
 
 @implementation PBGraphics
 
+-(void)initGraphics
+{
+    
+}
+
 @end

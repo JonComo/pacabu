@@ -10,4 +10,6 @@
 
 @interface PBGraphics : NSObject
 
+-(void)initGraphics;
+
 @end
