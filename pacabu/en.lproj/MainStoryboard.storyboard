@@ -4,39 +4,64 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Discovery View Controller - Home-->
+        <!--Navigation Controller - Item-->
+        <scene sceneID="ATa-P9-g1c">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="JUy-Nb-WyJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="KXQ-NN-fB3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYo-uv-fHj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="AZu-Gm-6Bz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KmU-CX-WgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-79"/>
+        </scene>
+        <!--Discovery View Controller - Discovery-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="PBDiscoveryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="DBc-Zs-HfO">
-                                <items>
-                                    <navigationItem title="Discovery" id="5w1-AZ-pba">
-                                        <barButtonItem key="leftBarButtonItem" title="Profile" id="4UN-wc-8lV">
-                                            <connections>
-                                                <segue destination="xjR-GL-1dO" kind="modal" id="yPH-HR-IIj"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Filter" id="1a2-Km-dMY"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hLg-7v-ozi">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JWY-ZX-OY1">
+                                    <size key="itemSize" width="290" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="15" maxX="0.0" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="A73-HJ-qrL"/>
+                                    <outlet property="delegate" destination="2" id="vfA-gC-mjE"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DBc-Zs-HfO" firstAttribute="top" secondItem="3" secondAttribute="top" type="user" id="b4u-xi-FUr"/>
-                            <constraint firstItem="DBc-Zs-HfO" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="uO9-8Y-htQ"/>
-                            <constraint firstItem="DBc-Zs-HfO" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="uR3-cF-d1r"/>
+                            <constraint firstItem="hLg-7v-ozi" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="INa-5j-f3P"/>
+                            <constraint firstItem="hLg-7v-ozi" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="LlD-sj-PKo"/>
+                            <constraint firstItem="hLg-7v-ozi" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="U2m-Vd-dFw"/>
+                            <constraint firstItem="hLg-7v-ozi" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="nLW-ch-d2q"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="ea2-nU-8fs"/>
+                    <navigationItem key="navigationItem" title="Discovery" id="Aof-bm-j34">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="1a2-Km-dMY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionViewDiscover" destination="hLg-7v-ozi" id="Jjk-Hq-YJ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793" y="-79"/>
+            <point key="canvasLocation" x="800" y="-79"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fwC-mZ-MRa">
@@ -49,12 +74,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="kd4-0k-Bma"/>
+                        <segue destination="JUy-Nb-WyJ" kind="relationship" relationship="viewControllers" id="JG7-bq-dFw"/>
+                        <segue destination="Jxm-uG-J7N" kind="relationship" relationship="viewControllers" id="wQm-pa-AIQ"/>
+                        <segue destination="vWf-e9-g9c" kind="relationship" relationship="viewControllers" id="5Ob-Bl-Rhf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNV-kZ-AqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="347" y="-79"/>
+            <point key="canvasLocation" x="-73" y="-79"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="oa8-cr-4Wz">
@@ -145,32 +172,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UO-zt-icU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-79"/>
+            <point key="canvasLocation" x="1209" y="677"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Navigation Controller - Bookings-->
+        <scene sceneID="nzR-Dm-vT1">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="vWf-e9-g9c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bookings" id="PdL-UW-WiG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dx9-Hz-Qec">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RIR-BK-Z7z" kind="relationship" relationship="rootViewController" id="Mx0-j3-Ph5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dG-E2-8uN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-796"/>
+        </scene>
+        <!--View Controller - Bookings-->
+        <scene sceneID="UnP-qz-LMv">
+            <objects>
+                <viewController id="RIR-BK-Z7z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zV7-4A-W8c">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bookings" id="IGZ-Vg-TBb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnQ-0z-ne0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="-796"/>
+        </scene>
+        <!--Navigation Controller - Profile-->
+        <scene sceneID="7hJ-Ot-F7z">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Jxm-uG-J7N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="lAt-11-2f7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Je-aW-Vx5">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xjR-GL-1dO" kind="relationship" relationship="rootViewController" id="uCV-VD-qqc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hL-ig-Mkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="677"/>
+        </scene>
+        <!--Profile View Controller - Profile-->
         <scene sceneID="5az-M5-fn8">
             <objects>
                 <viewController id="xjR-GL-1dO" customClass="PBProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9na-P2-pR1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h32-wF-rTh">
-                                <items>
-                                    <navigationItem title="Profile" id="lCx-Ai-eYY">
-                                        <barButtonItem key="leftBarButtonItem" title="Close" id="3aG-vM-9pR">
-                                            <connections>
-                                                <action selector="close:" destination="xjR-GL-1dO" id="VPn-Ne-n1t"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Account" id="X5Z-jM-3TM">
-                                            <connections>
-                                                <segue destination="6Wb-GQ-aDN" kind="modal" id="WGM-IH-g9l"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-Bh-GCR">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="New">
@@ -187,17 +245,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="h32-wF-rTh" firstAttribute="top" secondItem="9na-P2-pR1" secondAttribute="top" type="default" id="0ze-XH-S9U"/>
-                            <constraint firstItem="h32-wF-rTh" firstAttribute="trailing" secondItem="9na-P2-pR1" secondAttribute="trailing" type="default" id="3Ke-tf-RvB"/>
-                            <constraint firstItem="Kta-Bh-GCR" firstAttribute="centerX" secondItem="h32-wF-rTh" secondAttribute="centerX" type="default" id="FtJ-GF-BfN"/>
-                            <constraint firstItem="h32-wF-rTh" firstAttribute="leading" secondItem="9na-P2-pR1" secondAttribute="leading" type="default" id="I2q-Dk-NEO"/>
+                            <constraint firstItem="Kta-Bh-GCR" firstAttribute="centerX" secondItem="9na-P2-pR1" secondAttribute="centerX" type="default" id="605-Tx-7rN"/>
                             <constraint firstAttribute="bottom" secondItem="Kta-Bh-GCR" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="nUz-5r-8eS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Profile" id="fsb-gA-5Ha">
+                        <barButtonItem key="rightBarButtonItem" title="Account" id="X5Z-jM-3TM">
+                            <connections>
+                                <segue destination="6Wb-GQ-aDN" kind="modal" id="WGM-IH-g9l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIE-GJ-SKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="-79"/>
+            <point key="canvasLocation" x="800" y="677"/>
         </scene>
     </scenes>
     <classes>
@@ -217,8 +279,7 @@
         <class className="PBDiscoveryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBDiscoveryViewController.h"/>
             <relationships>
-                <relationship kind="action" name="changeView:" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="multiView" candidateClass="JCMultiView"/>
+                <relationship kind="outlet" name="collectionViewDiscover" candidateClass="UICollectionView"/>
             </relationships>
         </class>
         <class className="PBProfileViewController" superclassName="UIViewController">
@@ -227,6 +288,12 @@
                 <relationship kind="action" name="close:"/>
                 <relationship kind="action" name="new:"/>
             </relationships>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

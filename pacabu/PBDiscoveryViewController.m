@@ -7,11 +7,10 @@
 //
 
 #import "PBDiscoveryViewController.h"
-#import "JCMultiView.h"
 
-@interface PBDiscoveryViewController ()
+@interface PBDiscoveryViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 {
-    __weak IBOutlet JCMultiView *multiView;
+    __weak IBOutlet UICollectionView *collectionViewDiscover;
 }
 
 @end
@@ -23,8 +22,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    multiView.nibNames = @[@"ViewMap", @"ViewMap", @"ViewMap"];
-    [multiView setVisibleView:0];
+    [collectionViewDiscover registerNib:[UINib nibWithNibName:@"CellActivity" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"CellActivity"];
+    
+    [collectionViewDiscover registerNib:[UINib nibWithNibName:@"CellMap" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"CellMap"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,8 +33,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)changeView:(UISegmentedControl *)sender {
-    [multiView setVisibleView:sender.selectedSegmentIndex];
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *cellIdentifier = indexPath.row == 0 ? @"CellMap" : @"CellActivity";
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    return cell;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 30;
 }
 
 @end
