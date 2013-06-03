@@ -21,9 +21,9 @@
 
 -(UIViewController *)detailViewController
 {
-    UIStoryboard *secondaryStoryboard = [UIStoryboard storyboardWithName:@"secondaryStoryboard" bundle:[NSBundle mainBundle]];
+    UIStoryboard *secondaryStoryboard = [UIStoryboard storyboardWithName:@"SecondaryStoryboard" bundle:[NSBundle mainBundle]];
     
-    UIViewController *detail = [secondaryStoryboard instantiateViewControllerWithIdentifier:@"activityDetailVC"];
+    UIViewController *detail = [secondaryStoryboard instantiateViewControllerWithIdentifier:@"ActivityDetailVC"];
     
     //detail.activity = thing;
     
