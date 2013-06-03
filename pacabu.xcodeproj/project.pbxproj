@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3308A9A6175C2F31004B5F16 /* PBActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308A9A5175C2F31004B5F16 /* PBActivityDetailViewController.m */; };
+		3308A9A9175C32AB004B5F16 /* PBBillSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308A9A8175C32AB004B5F16 /* PBBillSummaryViewController.m */; };
 		335DE68717586D9800C87D00 /* PBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335DE68617586D9800C87D00 /* PBProfileViewController.m */; };
 		33D9E0A817585FF800D4B561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0A717585FF800D4B561 /* UIKit.framework */; };
 		33D9E0AA17585FF800D4B561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0A917585FF800D4B561 /* Foundation.framework */; };
@@ -41,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3308A9A4175C2F31004B5F16 /* PBActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBActivityDetailViewController.h; sourceTree = "<group>"; };
+		3308A9A5175C2F31004B5F16 /* PBActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBActivityDetailViewController.m; sourceTree = "<group>"; };
+		3308A9A7175C32AB004B5F16 /* PBBillSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBBillSummaryViewController.h; sourceTree = "<group>"; };
+		3308A9A8175C32AB004B5F16 /* PBBillSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBillSummaryViewController.m; sourceTree = "<group>"; };
 		335DE68517586D9800C87D00 /* PBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBProfileViewController.h; sourceTree = "<group>"; };
 		335DE68617586D9800C87D00 /* PBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBProfileViewController.m; sourceTree = "<group>"; };
 		33D9E0A417585FF800D4B561 /* pacabu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pacabu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +187,10 @@
 		33D9E0E11758670000D4B561 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3308A9A4175C2F31004B5F16 /* PBActivityDetailViewController.h */,
+				3308A9A5175C2F31004B5F16 /* PBActivityDetailViewController.m */,
+				3308A9A7175C32AB004B5F16 /* PBBillSummaryViewController.h */,
+				3308A9A8175C32AB004B5F16 /* PBBillSummaryViewController.m */,
 				33D9E0E21758678F00D4B561 /* PBAccountViewController.h */,
 				33D9E0E31758678F00D4B561 /* PBAccountViewController.m */,
 				335DE68517586D9800C87D00 /* PBProfileViewController.h */,
@@ -287,6 +297,8 @@
 				86D9A4AA175AC6BB005758D9 /* PBDiscoveryViewController.m in Sources */,
 				86D9A4AD175AC86E005758D9 /* PBActivity.m in Sources */,
 				8632CD76175C2DD200A954D1 /* PBGraphics.m in Sources */,
+				3308A9A6175C2F31004B5F16 /* PBActivityDetailViewController.m in Sources */,
+				3308A9A9175C32AB004B5F16 /* PBBillSummaryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
