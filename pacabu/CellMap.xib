@@ -46,10 +46,10 @@
 								<string key="NSFrameSize">{320, 150}</string>
 								<reference key="NSSuperview" ref="483641955"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIMultipleTouchEnabled">YES</bool>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<bool key="IBMKZoomEnabled">NO</bool>
 								<bool key="IBMKScrollEnabled">NO</bool>

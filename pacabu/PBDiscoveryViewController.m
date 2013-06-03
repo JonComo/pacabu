@@ -7,6 +7,7 @@
 //
 
 #import "PBDiscoveryViewController.h"
+#import "PBCell.h"
 
 @interface PBDiscoveryViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 {
@@ -45,6 +46,13 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 30;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    PBCell *cell = (PBCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    [cell detailViewController];
 }
 
 @end
