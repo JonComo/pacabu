@@ -211,12 +211,14 @@
                 <relationship kind="action" name="createAccount:"/>
                 <relationship kind="action" name="signIn:"/>
                 <relationship kind="action" name="signOut:"/>
+                <relationship kind="outlet" name="labelUser" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="PBDiscoveryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBDiscoveryViewController.h"/>
             <relationships>
                 <relationship kind="action" name="changeView:" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="multiView" candidateClass="JCMultiView"/>
             </relationships>
         </class>
         <class className="PBProfileViewController" superclassName="UIViewController">

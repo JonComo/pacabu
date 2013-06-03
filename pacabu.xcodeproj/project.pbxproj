@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3308A9A3175C2DBB004B5F16 /* user_profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3308A9A2175C2DBB004B5F16 /* user_profile.storyboard */; };
 		335DE68717586D9800C87D00 /* PBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335DE68617586D9800C87D00 /* PBProfileViewController.m */; };
 		33D9E0A817585FF800D4B561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0A717585FF800D4B561 /* UIKit.framework */; };
 		33D9E0AA17585FF800D4B561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0A917585FF800D4B561 /* Foundation.framework */; };
@@ -32,6 +31,7 @@
 		33D9E0E41758678F00D4B561 /* PBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D9E0E31758678F00D4B561 /* PBAccountViewController.m */; };
 		8632CD73175C166000A954D1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD72175C166000A954D1 /* icon@2x.png */; };
 		8632CD76175C2DD200A954D1 /* PBGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD75175C2DD200A954D1 /* PBGraphics.m */; };
+		8632CD78175C2ECE00A954D1 /* SecondaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD77175C2ECE00A954D1 /* SecondaryStoryboard.storyboard */; };
 		86D9A49A175AB773005758D9 /* PBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A499175AB773005758D9 /* PBManager.m */; };
 		86D9A49E175AB904005758D9 /* PBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A49D175AB904005758D9 /* PBParseManager.m */; };
 		86D9A4A4175ABAC8005758D9 /* JCAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A3175ABAC8005758D9 /* JCAlertViewManager.m */; };
@@ -41,7 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3308A9A2175C2DBB004B5F16 /* user_profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = user_profile.storyboard; sourceTree = "<group>"; };
 		335DE68517586D9800C87D00 /* PBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBProfileViewController.h; sourceTree = "<group>"; };
 		335DE68617586D9800C87D00 /* PBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBProfileViewController.m; sourceTree = "<group>"; };
 		33D9E0A417585FF800D4B561 /* pacabu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pacabu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +72,7 @@
 		8632CD72175C166000A954D1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		8632CD74175C2DD200A954D1 /* PBGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGraphics.h; sourceTree = "<group>"; };
 		8632CD75175C2DD200A954D1 /* PBGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGraphics.m; sourceTree = "<group>"; };
+		8632CD77175C2ECE00A954D1 /* SecondaryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondaryStoryboard.storyboard; sourceTree = "<group>"; };
 		86D9A498175AB773005758D9 /* PBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBManager.h; sourceTree = "<group>"; };
 		86D9A499175AB773005758D9 /* PBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBManager.m; sourceTree = "<group>"; };
 		86D9A49C175AB904005758D9 /* PBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParseManager.h; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 				33D9E0B617585FF800D4B561 /* PBAppDelegate.h */,
 				33D9E0B717585FF800D4B561 /* PBAppDelegate.m */,
 				33D9E0BF17585FF800D4B561 /* MainStoryboard.storyboard */,
-				3308A9A2175C2DBB004B5F16 /* user_profile.storyboard */,
+				8632CD77175C2ECE00A954D1 /* SecondaryStoryboard.storyboard */,
 				86D9A49B175AB778005758D9 /* Model */,
 				33D9E0E11758670000D4B561 /* View */,
 				33D9E0AE17585FF800D4B561 /* Supporting Files */,
@@ -266,7 +266,7 @@
 				33D9E0BE17585FF800D4B561 /* Default-568h@2x.png in Resources */,
 				33D9E0C117585FF800D4B561 /* MainStoryboard.storyboard in Resources */,
 				8632CD73175C166000A954D1 /* icon@2x.png in Resources */,
-				3308A9A3175C2DBB004B5F16 /* user_profile.storyboard in Resources */,
+				8632CD78175C2ECE00A954D1 /* SecondaryStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
