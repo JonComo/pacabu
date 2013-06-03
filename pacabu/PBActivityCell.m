@@ -14,7 +14,7 @@
 -(void)setup
 {
     [self.imageViewBackground setImage:[UIImage imageNamed:@"icon"]];
-    //[imageViewBorder setImage:[PBGraphics cellBorder]];
+    [self.imageViewBorder setImage:[PBGraphics cellBorder]];
 }
 
 -(UIViewController *)detailViewController
