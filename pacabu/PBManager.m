@@ -34,11 +34,16 @@
     return self;
 }
 
--(void)activitiesCompletion:(void (^)(BOOL success, NSArray *objects))block
+-(void)activitiesOptions:(NSDictionary *)options completion:(void (^)(BOOL, NSArray *))block
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
     
     query.limit = 25;
+    
+    for (NSString *key in options)
+    {
+        [query setValue:options[key] forKeyPath:key];
+    }
     
     [[PBParseManager sharedManager] runQuery:query completion:block];
 }

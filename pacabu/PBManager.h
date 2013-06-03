@@ -12,6 +12,6 @@
 
 +(PBManager *)sharedManager;
 
--(void)activitiesCompletion:(void (^)(BOOL success, NSArray *objects))block;
+-(void)activitiesOptions:(NSDictionary *)options completion:(void (^)(BOOL success, NSArray *objects))block;
 
 @end
