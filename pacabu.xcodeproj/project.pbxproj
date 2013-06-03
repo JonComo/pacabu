@@ -36,6 +36,8 @@
 		8632CD78175C2ECE00A954D1 /* SecondaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD77175C2ECE00A954D1 /* SecondaryStoryboard.storyboard */; };
 		8632CD7A175C324400A954D1 /* CellActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD79175C324400A954D1 /* CellActivity.xib */; };
 		8632CD7C175C336B00A954D1 /* CellMap.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD7B175C336B00A954D1 /* CellMap.xib */; };
+		8632CD7F175C36B800A954D1 /* PBActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD7E175C36B800A954D1 /* PBActivityCell.m */; };
+		8632CD82175C380400A954D1 /* PBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD81175C380400A954D1 /* PBCell.m */; };
 		86D9A49A175AB773005758D9 /* PBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A499175AB773005758D9 /* PBManager.m */; };
 		86D9A49E175AB904005758D9 /* PBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A49D175AB904005758D9 /* PBParseManager.m */; };
 		86D9A4A4175ABAC8005758D9 /* JCAlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A3175ABAC8005758D9 /* JCAlertViewManager.m */; };
@@ -83,6 +85,10 @@
 		8632CD77175C2ECE00A954D1 /* SecondaryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SecondaryStoryboard.storyboard; sourceTree = "<group>"; };
 		8632CD79175C324400A954D1 /* CellActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellActivity.xib; sourceTree = "<group>"; };
 		8632CD7B175C336B00A954D1 /* CellMap.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellMap.xib; sourceTree = "<group>"; };
+		8632CD7D175C36B800A954D1 /* PBActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBActivityCell.h; sourceTree = "<group>"; };
+		8632CD7E175C36B800A954D1 /* PBActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBActivityCell.m; sourceTree = "<group>"; };
+		8632CD80175C380400A954D1 /* PBCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCell.h; sourceTree = "<group>"; };
+		8632CD81175C380400A954D1 /* PBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCell.m; sourceTree = "<group>"; };
 		86D9A498175AB773005758D9 /* PBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBManager.h; sourceTree = "<group>"; };
 		86D9A499175AB773005758D9 /* PBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBManager.m; sourceTree = "<group>"; };
 		86D9A49C175AB904005758D9 /* PBParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBParseManager.h; sourceTree = "<group>"; };
@@ -203,6 +209,10 @@
 				86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */,
 				8632CD79175C324400A954D1 /* CellActivity.xib */,
 				8632CD7B175C336B00A954D1 /* CellMap.xib */,
+				8632CD7D175C36B800A954D1 /* PBActivityCell.h */,
+				8632CD7E175C36B800A954D1 /* PBActivityCell.m */,
+				8632CD80175C380400A954D1 /* PBCell.h */,
+				8632CD81175C380400A954D1 /* PBCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -307,6 +317,8 @@
 				8632CD76175C2DD200A954D1 /* PBGraphics.m in Sources */,
 				3308A9A6175C2F31004B5F16 /* PBActivityDetailViewController.m in Sources */,
 				3308A9A9175C32AB004B5F16 /* PBBillSummaryViewController.m in Sources */,
+				8632CD7F175C36B800A954D1 /* PBActivityCell.m in Sources */,
+				8632CD82175C380400A954D1 /* PBCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
