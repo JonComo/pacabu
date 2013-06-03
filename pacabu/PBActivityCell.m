@@ -7,16 +7,18 @@
 //
 
 #import "PBActivityCell.h"
+#import "PBGraphics.h"
 
 @implementation PBActivityCell
-
-- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    __weak IBOutlet UIImageView *imageViewBackground;
+    __weak IBOutlet UIImageView *imageViewBorder;
+}
+
+-(void)setup
+{
+    [imageViewBackground setImage:[UIImage imageNamed:@"icon"]];
+    [imageViewBorder setImage:[PBGraphics cellBorder]];
 }
 
 -(UIViewController *)detailViewController

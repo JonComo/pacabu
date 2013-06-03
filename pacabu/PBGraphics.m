@@ -15,4 +15,9 @@
     
 }
 
++(UIImage *)cellBorder
+{
+    return [[UIImage imageNamed:@"cellBorder"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 2, 2, 2) resizingMode:UIImageResizingModeStretch];
+}
+
 @end

@@ -13,10 +13,28 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
+    
     if (self) {
         // Initialization code
+        [self setup];
     }
+    
     return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        //init
+        [self setup];
+    }
+    
+    return self;
+}
+
+-(void)setup
+{
+    //no setup
 }
 
 -(UIViewController *)detailViewController

@@ -8,7 +8,6 @@
 
 #import "PBManager.h"
 #import "PBParseManager.h"
-#import <Parse/Parse.h>
 
 @implementation PBManager
 
@@ -40,8 +39,9 @@
     
     query.limit = 25;
     
-    for (NSString *key in options)
-    {
+    [query includeKey:@"user"];
+    
+    for (NSString *key in options){
         [query setValue:options[key] forKeyPath:key];
     }
     

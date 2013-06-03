@@ -38,7 +38,7 @@
     
     [collectionViewDiscover addSubview:refresh];
     
-    [self refresh:nil];
+    [self findActivitiesCachePolicyCache:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,9 +47,9 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)refresh:(UIRefreshControl *)control
+-(void)findActivitiesCachePolicyCache:(BOOL)cache
 {
-    [[PBManager sharedManager] activitiesCompletion:^(BOOL success, NSArray *objects) {
+    [[PBManager sharedManager] activitiesOptions:@{@"cachePolicy" : cache ? @(kPFCachePolicyCacheElseNetwork) : @(kPFCachePolicyNetworkElseCache)} completion:^(BOOL success, NSArray *objects) {
         
         [refresh endRefreshing];
         
@@ -58,6 +58,11 @@
         cells = [objects mutableCopy];
         [collectionViewDiscover reloadData];
     }];
+}
+
+-(void)refresh:(UIRefreshControl *)control
+{
+    [self findActivitiesCachePolicyCache:NO];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

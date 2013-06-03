@@ -12,4 +12,6 @@
 
 -(UIViewController *)detailViewController;
 
+-(void)setup;
+
 @end
