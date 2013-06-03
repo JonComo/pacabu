@@ -10,6 +10,10 @@
 		3308A9A6175C2F31004B5F16 /* PBActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308A9A5175C2F31004B5F16 /* PBActivityDetailViewController.m */; };
 		3308A9A9175C32AB004B5F16 /* PBBillSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308A9A8175C32AB004B5F16 /* PBBillSummaryViewController.m */; };
 		3308A9AC175C3C84004B5F16 /* PBHostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308A9AB175C3C84004B5F16 /* PBHostDetailViewController.m */; };
+		3308A9B8175C4703004B5F16 /* PBCityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3308A9B7175C4703004B5F16 /* PBCityListViewController.m */; };
+		3308A9BC175C479D004B5F16 /* pack1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3308A9B9175C479D004B5F16 /* pack1.jpg */; };
+		3308A9BD175C479D004B5F16 /* pack2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3308A9BA175C479D004B5F16 /* pack2.jpg */; };
+		3308A9BE175C479D004B5F16 /* pack3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3308A9BB175C479D004B5F16 /* pack3.jpg */; };
 		335DE68717586D9800C87D00 /* PBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 335DE68617586D9800C87D00 /* PBProfileViewController.m */; };
 		33D9E0A817585FF800D4B561 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0A717585FF800D4B561 /* UIKit.framework */; };
 		33D9E0AA17585FF800D4B561 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0A917585FF800D4B561 /* Foundation.framework */; };
@@ -32,7 +36,6 @@
 		33D9E0DB175862CB00D4B561 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DA175862CB00D4B561 /* StoreKit.framework */; };
 		33D9E0DD175862D100D4B561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */; };
 		33D9E0E41758678F00D4B561 /* PBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D9E0E31758678F00D4B561 /* PBAccountViewController.m */; };
-		8632CD73175C166000A954D1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD72175C166000A954D1 /* icon@2x.png */; };
 		8632CD76175C2DD200A954D1 /* PBGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD75175C2DD200A954D1 /* PBGraphics.m */; };
 		8632CD78175C2ECE00A954D1 /* SecondaryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD77175C2ECE00A954D1 /* SecondaryStoryboard.storyboard */; };
 		8632CD7A175C324400A954D1 /* CellActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD79175C324400A954D1 /* CellActivity.xib */; };
@@ -56,6 +59,11 @@
 		3308A9A8175C32AB004B5F16 /* PBBillSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBBillSummaryViewController.m; sourceTree = "<group>"; };
 		3308A9AA175C3C84004B5F16 /* PBHostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBHostDetailViewController.h; sourceTree = "<group>"; };
 		3308A9AB175C3C84004B5F16 /* PBHostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBHostDetailViewController.m; sourceTree = "<group>"; };
+		3308A9B6175C4703004B5F16 /* PBCityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCityListViewController.h; sourceTree = "<group>"; };
+		3308A9B7175C4703004B5F16 /* PBCityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCityListViewController.m; sourceTree = "<group>"; };
+		3308A9B9175C479D004B5F16 /* pack1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack1.jpg; sourceTree = "<group>"; };
+		3308A9BA175C479D004B5F16 /* pack2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack2.jpg; sourceTree = "<group>"; };
+		3308A9BB175C479D004B5F16 /* pack3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack3.jpg; sourceTree = "<group>"; };
 		335DE68517586D9800C87D00 /* PBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBProfileViewController.h; sourceTree = "<group>"; };
 		335DE68617586D9800C87D00 /* PBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBProfileViewController.m; sourceTree = "<group>"; };
 		33D9E0A417585FF800D4B561 /* pacabu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pacabu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +145,9 @@
 		33D9E09B17585FF800D4B561 = {
 			isa = PBXGroup;
 			children = (
+				3308A9B9175C479D004B5F16 /* pack1.jpg */,
+				3308A9BA175C479D004B5F16 /* pack2.jpg */,
+				3308A9BB175C479D004B5F16 /* pack3.jpg */,
 				8632CD72175C166000A954D1 /* icon@2x.png */,
 				33D9E0AD17585FF800D4B561 /* pacabu */,
 				33D9E0A617585FF800D4B561 /* Frameworks */,
@@ -211,6 +222,8 @@
 				3308A9A8175C32AB004B5F16 /* PBBillSummaryViewController.m */,
 				3308A9AA175C3C84004B5F16 /* PBHostDetailViewController.h */,
 				3308A9AB175C3C84004B5F16 /* PBHostDetailViewController.m */,
+				3308A9B6175C4703004B5F16 /* PBCityListViewController.h */,
+				3308A9B7175C4703004B5F16 /* PBCityListViewController.m */,
 				33D9E0E21758678F00D4B561 /* PBAccountViewController.h */,
 				33D9E0E31758678F00D4B561 /* PBAccountViewController.m */,
 				335DE68517586D9800C87D00 /* PBProfileViewController.h */,
@@ -310,12 +323,14 @@
 				33D9E0BC17585FF800D4B561 /* Default@2x.png in Resources */,
 				33D9E0BE17585FF800D4B561 /* Default-568h@2x.png in Resources */,
 				33D9E0C117585FF800D4B561 /* MainStoryboard.storyboard in Resources */,
-				8632CD73175C166000A954D1 /* icon@2x.png in Resources */,
 				8632CD78175C2ECE00A954D1 /* SecondaryStoryboard.storyboard in Resources */,
 				8632CD7A175C324400A954D1 /* CellActivity.xib in Resources */,
 				8632CD7C175C336B00A954D1 /* CellMap.xib in Resources */,
 				8632CD89175C426700A954D1 /* cellBorder@2x.png in Resources */,
 				8632CD8B175C426700A954D1 /* icon@2x.png in Resources */,
+				3308A9BC175C479D004B5F16 /* pack1.jpg in Resources */,
+				3308A9BD175C479D004B5F16 /* pack2.jpg in Resources */,
+				3308A9BE175C479D004B5F16 /* pack3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +356,7 @@
 				8632CD7F175C36B800A954D1 /* PBActivityCell.m in Sources */,
 				8632CD82175C380400A954D1 /* PBCell.m in Sources */,
 				3308A9AC175C3C84004B5F16 /* PBHostDetailViewController.m in Sources */,
+				3308A9B8175C4703004B5F16 /* PBCityListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
