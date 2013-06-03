@@ -29,6 +29,8 @@
 		33D9E0DB175862CB00D4B561 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DA175862CB00D4B561 /* StoreKit.framework */; };
 		33D9E0DD175862D100D4B561 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */; };
 		33D9E0E41758678F00D4B561 /* PBAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D9E0E31758678F00D4B561 /* PBAccountViewController.m */; };
+		8632CD71175C105100A954D1 /* PBListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD70175C105100A954D1 /* PBListView.m */; };
+		8632CD73175C166000A954D1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD72175C166000A954D1 /* icon@2x.png */; };
 		86D9A497175AB5FE005758D9 /* CellActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D9A496175AB5FE005758D9 /* CellActivity.xib */; };
 		86D9A49A175AB773005758D9 /* PBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A499175AB773005758D9 /* PBManager.m */; };
 		86D9A49E175AB904005758D9 /* PBParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A49D175AB904005758D9 /* PBParseManager.m */; };
@@ -70,6 +72,9 @@
 		33D9E0DC175862D100D4B561 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		33D9E0E21758678F00D4B561 /* PBAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAccountViewController.h; sourceTree = "<group>"; };
 		33D9E0E31758678F00D4B561 /* PBAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAccountViewController.m; sourceTree = "<group>"; };
+		8632CD6F175C105100A954D1 /* PBListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBListView.h; sourceTree = "<group>"; };
+		8632CD70175C105100A954D1 /* PBListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBListView.m; sourceTree = "<group>"; };
+		8632CD72175C166000A954D1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		86D9A496175AB5FE005758D9 /* CellActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellActivity.xib; sourceTree = "<group>"; };
 		86D9A498175AB773005758D9 /* PBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBManager.h; sourceTree = "<group>"; };
 		86D9A499175AB773005758D9 /* PBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBManager.m; sourceTree = "<group>"; };
@@ -116,6 +121,7 @@
 		33D9E09B17585FF800D4B561 = {
 			isa = PBXGroup;
 			children = (
+				8632CD72175C166000A954D1 /* icon@2x.png */,
 				33D9E0AD17585FF800D4B561 /* pacabu */,
 				33D9E0A617585FF800D4B561 /* Frameworks */,
 				33D9E0A517585FF800D4B561 /* Products */,
@@ -185,13 +191,15 @@
 				33D9E0E31758678F00D4B561 /* PBAccountViewController.m */,
 				335DE68517586D9800C87D00 /* PBProfileViewController.h */,
 				335DE68617586D9800C87D00 /* PBProfileViewController.m */,
-				86D9A496175AB5FE005758D9 /* CellActivity.xib */,
 				86D9A4A8175AC6BB005758D9 /* PBDiscoveryViewController.h */,
 				86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */,
 				86D9A4AE175AD69E005758D9 /* JCMultiView.h */,
 				86D9A4AF175AD69E005758D9 /* JCMultiView.m */,
 				86D9A4B1175AE030005758D9 /* ViewMap.xib */,
 				86D9A4B5175AE4FF005758D9 /* ViewList.xib */,
+				86D9A496175AB5FE005758D9 /* CellActivity.xib */,
+				8632CD6F175C105100A954D1 /* PBListView.h */,
+				8632CD70175C105100A954D1 /* PBListView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 				86D9A497175AB5FE005758D9 /* CellActivity.xib in Resources */,
 				86D9A4B2175AE030005758D9 /* ViewMap.xib in Resources */,
 				86D9A4B6175AE4FF005758D9 /* ViewList.xib in Resources */,
+				8632CD73175C166000A954D1 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +300,7 @@
 				86D9A4AA175AC6BB005758D9 /* PBDiscoveryViewController.m in Sources */,
 				86D9A4AD175AC86E005758D9 /* PBActivity.m in Sources */,
 				86D9A4B0175AD69E005758D9 /* JCMultiView.m in Sources */,
+				8632CD71175C105100A954D1 /* PBListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

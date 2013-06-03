@@ -21,6 +21,11 @@
 {
     _nibNames = nibNames;
     
+    [self setup];
+}
+
+-(void)setup
+{
     if (!views)
         views = [NSMutableDictionary dictionary];
 }
@@ -75,6 +80,7 @@
         [subview removeFromSuperview];
     
     viewToDisplay = [self viewAtIndex:index];
+    viewToDisplay.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     [self addSubview:viewToDisplay];
     
     previousIndex = index;

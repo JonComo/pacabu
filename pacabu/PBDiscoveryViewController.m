@@ -23,7 +23,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    multiView.nibNames = @[@"ViewList", @"ViewMap"];
+    multiView.nibNames = @[@"ViewMap", @"ViewMap", @"ViewMap"];
     [multiView setVisibleView:0];
 }
 
