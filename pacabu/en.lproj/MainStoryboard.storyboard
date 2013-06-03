@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Discovery View Controller - Discovery-->
+        <!--Discovery View Controller - Home-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="PBDiscoveryViewController" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <constraint firstItem="DBc-Zs-HfO" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="uR3-cF-d1r"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discovery" id="ea2-nU-8fs"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="ea2-nU-8fs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,7 +42,7 @@
         <scene sceneID="fwC-mZ-MRa">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="xGq-Ko-fLW" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="0ey-RP-8pP">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -54,7 +54,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNV-kZ-AqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="-79"/>
+            <point key="canvasLocation" x="347" y="-79"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="oa8-cr-4Wz">
@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UO-zt-icU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="-79"/>
+            <point key="canvasLocation" x="1676" y="-79"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="5az-M5-fn8">
@@ -211,14 +211,12 @@
                 <relationship kind="action" name="createAccount:"/>
                 <relationship kind="action" name="signIn:"/>
                 <relationship kind="action" name="signOut:"/>
-                <relationship kind="outlet" name="labelUser" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="PBDiscoveryViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBDiscoveryViewController.h"/>
             <relationships>
                 <relationship kind="action" name="changeView:" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="multiView" candidateClass="JCMultiView"/>
             </relationships>
         </class>
         <class className="PBProfileViewController" superclassName="UIViewController">
