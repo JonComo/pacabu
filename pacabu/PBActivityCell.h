@@ -10,4 +10,6 @@
 
 @interface PBActivityCell : PBCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewBackground;
+
 @end

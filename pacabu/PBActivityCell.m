@@ -10,15 +10,11 @@
 #import "PBGraphics.h"
 
 @implementation PBActivityCell
-{
-    __weak IBOutlet UIImageView *imageViewBackground;
-    __weak IBOutlet UIImageView *imageViewBorder;
-}
 
 -(void)setup
 {
-    [imageViewBackground setImage:[UIImage imageNamed:@"icon"]];
-    [imageViewBorder setImage:[PBGraphics cellBorder]];
+    [self.imageViewBackground setImage:[UIImage imageNamed:@"icon"]];
+    //[imageViewBorder setImage:[PBGraphics cellBorder]];
 }
 
 -(UIViewController *)detailViewController

@@ -9,6 +9,7 @@
 #import "PBDiscoveryViewController.h"
 #import "PBManager.h"
 #import "PBCell.h"
+#import "PBActivityCell.h"
 
 @interface PBDiscoveryViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 {
@@ -69,7 +70,9 @@
 {
     NSString *cellIdentifier = @"CellActivity";
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    PBActivityCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    [cell setup];
     
     return cell;
 }
@@ -81,7 +84,7 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    PBCell *cell = (PBCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    PBActivityCell *cell = (PBActivityCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
     [self.navigationController pushViewController:[cell detailViewController] animated:YES];
 }
