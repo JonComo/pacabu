@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="71" y="6"/>
         </scene>
-        <!--View Controller-->
+        <!--Bill Summary View Controller-->
         <scene sceneID="Ym0-nr-22t">
             <objects>
-                <viewController storyboardIdentifier="SummaryVC" id="M9C-7f-Wdu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SummaryVC" id="M9C-7f-Wdu" customClass="PBBillSummaryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PYL-4e-fyP">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -186,6 +186,9 @@
                 <relationship kind="outlet" name="bookButton" candidateClass="UIButton"/>
             </relationships>
         </class>
+        <class className="PBBillSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBBillSummaryViewController.h"/>
+        </class>
         <class className="UICollectionReusableView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
         </class>
@@ -194,9 +197,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
