@@ -1,20 +1,18 @@
 //
-//  PBBillSummaryViewController.m
+//  PBHostDetailViewController.m
 //  pacabu
 //
 //  Created by David de Jesus on 6/2/13.
 //  Copyright (c) 2013 DKJ. All rights reserved.
 //
 
-#import "PBBillSummaryViewController.h"
 #import "PBHostDetailViewController.h"
-#import "PBActivity.h"
 
-@interface PBBillSummaryViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface PBHostDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @end
 
-@implementation PBBillSummaryViewController
+@implementation PBHostDetailViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Msg" style:UIBarButtonItemStylePlain target:self action:@selector(callHost)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
 }
 
 - (void)callHost
@@ -42,29 +41,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 #pragma mark UICollectionView
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    return 1;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"summaryCell" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"hostCell" forIndexPath:indexPath];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 1) {
-        UIStoryboard *secondSB = [UIStoryboard storyboardWithName:@"SecondaryStoryboard" bundle:[NSBundle mainBundle]];
-        PBHostDetailViewController *hostVC = [secondSB instantiateViewControllerWithIdentifier:@"hostDetailVC"];
-        hostVC.activity = self.activity;
-        [self.navigationController pushViewController:hostVC animated:YES];
-    }
-
+    
 }
 
 @end
