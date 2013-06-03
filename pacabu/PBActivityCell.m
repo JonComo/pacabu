@@ -21,9 +21,13 @@
 
 -(UIViewController *)detailViewController
 {
-    NSLog(@"Activity cell returned");
+    UIStoryboard *secondaryStoryboard = [UIStoryboard storyboardWithName:@"secondaryStoryboard" bundle:[NSBundle mainBundle]];
     
-    return nil;
+    UIViewController *detail = [secondaryStoryboard instantiateViewControllerWithIdentifier:@"activityDetailVC"];
+    
+    //detail.activity = thing;
+    
+    return detail;
 }
 
 /*

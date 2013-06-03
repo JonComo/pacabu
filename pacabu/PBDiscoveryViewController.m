@@ -52,7 +52,7 @@
 {
     PBCell *cell = (PBCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
-    [cell detailViewController];
+    [self.navigationController pushViewController:[cell detailViewController] animated:YES];
 }
 
 @end
