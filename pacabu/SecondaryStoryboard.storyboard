@@ -16,7 +16,8 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmT-vh-EmB">
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="315" id="uPC-0C-ZMQ"/>
+                                            <constraint firstAttribute="width" constant="308" id="DnA-NP-Vgx"/>
+                                            <constraint firstAttribute="height" constant="47" id="jIO-JL-GLN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Book it!">
@@ -31,11 +32,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.89845628" green="0.89845628" blue="0.89845628" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.11170679209183676" green="0.11170679209183676" blue="0.11170679209183676" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="QmT-vh-EmB" firstAttribute="top" secondItem="B0r-1r-mKS" secondAttribute="top" constant="7" id="GYx-Ci-2tF"/>
+                                    <constraint firstItem="QmT-vh-EmB" firstAttribute="centerY" secondItem="B0r-1r-mKS" secondAttribute="centerY" type="default" id="A00-qT-Zys"/>
                                     <constraint firstAttribute="height" constant="55" type="user" id="OG1-SZ-pw3"/>
-                                    <constraint firstItem="QmT-vh-EmB" firstAttribute="centerX" secondItem="B0r-1r-mKS" secondAttribute="centerX" type="default" id="aLT-ed-ycZ"/>
+                                    <constraint firstItem="QmT-vh-EmB" firstAttribute="centerX" secondItem="B0r-1r-mKS" secondAttribute="centerX" type="default" id="vLO-g5-426"/>
                                 </constraints>
                             </view>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZEJ-CH-1YQ">
@@ -77,9 +78,9 @@
                             <constraint firstItem="ZEJ-CH-1YQ" firstAttribute="leading" secondItem="ojf-h5-bu7" secondAttribute="leading" type="default" id="2ke-fY-5P9"/>
                             <constraint firstItem="ZEJ-CH-1YQ" firstAttribute="trailing" secondItem="ojf-h5-bu7" secondAttribute="trailing" type="default" id="Kaw-ot-afh"/>
                             <constraint firstItem="B0r-1r-mKS" firstAttribute="bottom" secondItem="ojf-h5-bu7" secondAttribute="bottom" type="user" id="R6B-U3-e7E"/>
-                            <constraint firstItem="B0r-1r-mKS" firstAttribute="leading" secondItem="ojf-h5-bu7" secondAttribute="leading" type="default" id="SUW-H3-7pn"/>
+                            <constraint firstItem="B0r-1r-mKS" firstAttribute="leading" secondItem="ojf-h5-bu7" secondAttribute="leading" type="user" id="SUW-H3-7pn"/>
                             <constraint firstItem="ZEJ-CH-1YQ" firstAttribute="top" secondItem="ojf-h5-bu7" secondAttribute="top" type="default" id="a8v-gQ-Ihb"/>
-                            <constraint firstItem="B0r-1r-mKS" firstAttribute="trailing" secondItem="ojf-h5-bu7" secondAttribute="trailing" type="default" id="ccp-A4-SHx"/>
+                            <constraint firstItem="B0r-1r-mKS" firstAttribute="trailing" secondItem="ojf-h5-bu7" secondAttribute="trailing" type="user" id="ccp-A4-SHx"/>
                             <constraint firstItem="B0r-1r-mKS" firstAttribute="top" secondItem="ZEJ-CH-1YQ" secondAttribute="bottom" type="user" id="x7b-f0-drP"/>
                         </constraints>
                     </view>
@@ -276,6 +277,36 @@
             <point key="canvasLocation" x="857" y="6"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PBActivityDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBActivityDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="book:"/>
+                <relationship kind="outlet" name="bookButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="PBBillSummaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBBillSummaryViewController.h"/>
+        </class>
+        <class className="PBCityListViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBCityListViewController.h"/>
+        </class>
+        <class className="PBHostDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PBHostDetailViewController.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

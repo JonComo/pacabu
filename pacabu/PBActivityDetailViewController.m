@@ -9,6 +9,7 @@
 #import "PBActivityDetailViewController.h"
 #import "PBBillSummaryViewController.h"
 #import "PBActivity.h"
+#import "PBGraphics.h"
 
 @interface PBActivityDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
@@ -20,14 +21,6 @@
 
 @implementation PBActivityDetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -35,7 +28,7 @@
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Blah" style:UIBarButtonItemStylePlain target:self action:@selector(shareActivity)];
     self.navigationItem.rightBarButtonItem = anotherButton;
     
-    
+    [PBGraphics buttonDone:bookButton];
 }
 
 - (void)shareActivity

@@ -13,7 +13,7 @@
 
 -(void)setup
 {
-    [self.imageViewBackground setImage:[UIImage imageNamed:@"icon"]];
+    [self.imageViewBackground setImage:[UIImage imageNamed:@"pack1.jpg"]];
     [self.imageViewBorder setImage:[PBGraphics cellBorder]];
 }
 

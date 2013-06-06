@@ -7,6 +7,7 @@
 //
 
 #import "PBAppDelegate.h"
+#import "PBGraphics.h"
 #import <Parse/Parse.h>
 
 
@@ -18,6 +19,8 @@
     [Parse setApplicationId:@"fnOkCA82y0EBUaemIH0DaGIghugZh7EUfVzILWSx"
                   clientKey:@"QdZezuGzgQkAXJ6luyjosPUH2YgG3eghJDhV8iP1"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [PBGraphics initGraphics];
     
     return YES;
 }

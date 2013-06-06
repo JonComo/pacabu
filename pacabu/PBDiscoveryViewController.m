@@ -9,6 +9,7 @@
 #import "PBDiscoveryViewController.h"
 #import "PBManager.h"
 #import "PBCell.h"
+#import "PBGraphics.h"
 #import "PBActivityCell.h"
 
 @interface PBDiscoveryViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
@@ -40,6 +41,8 @@
     [collectionViewDiscover addSubview:refresh];
     
     [self findActivitiesCachePolicyCache:YES];
+    
+    [self.view setBackgroundColor:[PBGraphics darkTexture]];
 }
 
 - (void)didReceiveMemoryWarning
