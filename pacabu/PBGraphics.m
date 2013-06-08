@@ -19,7 +19,7 @@
 {
     [[UINavigationBar appearance] setBackgroundImage:[PBGraphics navigationBar] forBarMetrics:UIBarMetricsDefault];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Avenir-Black" size:20], UITextAttributeTextColor : COLORB, UITextAttributeTextShadowColor : [UIColor clearColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Verdana-Bold" size:17], UITextAttributeTextColor : COLORB, UITextAttributeTextShadowColor : COLORB}];
     
     [[UIBarButtonItem appearance] setTintColor:COLORB];
     
@@ -48,8 +48,8 @@
 
 +(void)buttonDone:(UIButton *)button
 {
-    [button setBackgroundImage:[PBGraphics buttonImageWithName:@"buttonDone"] forState:UIControlStateNormal];
-    [button setBackgroundImage:[PBGraphics buttonImageWithName:@"buttonDoneHighlighted"] forState:UIControlStateHighlighted];
+    [button setBackgroundImage:[PBGraphics buttonImageWithName:@""] forState:UIControlStateNormal];
+    [button setBackgroundImage:[PBGraphics buttonImageWithName:@""] forState:UIControlStateHighlighted];
     
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button setTitleColor:COLORB forState:UIControlStateHighlighted];

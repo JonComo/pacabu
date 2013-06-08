@@ -9,25 +9,22 @@
 #import "PBBillSummaryViewController.h"
 #import "PBHostDetailViewController.h"
 #import "PBActivity.h"
+#import "PBGraphics.h"
 
 @interface PBBillSummaryViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+{
+    NSMutableArray *cells;
+}
 
 @end
 
 @implementation PBBillSummaryViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[PBGraphics darkTexture]];
 
 }
 
@@ -47,23 +44,18 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    return cells.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"summaryCell" forIndexPath:indexPath];
+    UICollectionViewCell *cell;
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 1) {
-        UIStoryboard *secondSB = [UIStoryboard storyboardWithName:@"SecondaryStoryboard" bundle:[NSBundle mainBundle]];
-        PBHostDetailViewController *hostVC = [secondSB instantiateViewControllerWithIdentifier:@"hostDetailVC"];
-        hostVC.activity = self.activity;
-        [self.navigationController pushViewController:hostVC animated:YES];
-    }
+
 
 }
 

@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Activities-->
         <scene sceneID="ATa-P9-g1c">
             <objects>
                 <navigationController definesPresentationContext="YES" id="JUy-Nb-WyJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KXQ-NN-fB3"/>
+                    <tabBarItem key="tabBarItem" title="Activities" id="KXQ-NN-fB3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYo-uv-fHj">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -51,7 +51,7 @@
                             <constraint firstItem="hLg-7v-ozi" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="nLW-ch-d2q"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="ea2-nU-8fs"/>
+                    <tabBarItem key="tabBarItem" title="Activities" id="ea2-nU-8fs"/>
                     <navigationItem key="navigationItem" title="Discovery" id="Aof-bm-j34"/>
                     <connections>
                         <outlet property="collectionViewDiscover" destination="hLg-7v-ozi" id="Jjk-Hq-YJ0"/>

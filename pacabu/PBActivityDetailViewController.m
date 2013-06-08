@@ -10,10 +10,12 @@
 #import "PBBillSummaryViewController.h"
 #import "PBActivity.h"
 #import "PBGraphics.h"
+#import "PBActivityCell.h"
 
 @interface PBActivityDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 {
     __weak IBOutlet UIButton *bookButton;
+    NSMutableArray *cells;
     
 }
 
@@ -28,7 +30,8 @@
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Blah" style:UIBarButtonItemStylePlain target:self action:@selector(shareActivity)];
     self.navigationItem.rightBarButtonItem = anotherButton;
     
-    [PBGraphics buttonDone:bookButton];
+    [self.view setBackgroundColor:[PBGraphics darkTexture]];
+    
 }
 
 - (void)shareActivity
@@ -53,20 +56,24 @@
 
 #pragma mark UICollectionView
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 1;
-}
-
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"detailCell" forIndexPath:indexPath];
+    
+    UICollectionViewCell *cell;
+    
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
+    return cells.count;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
 }
 
 @end
