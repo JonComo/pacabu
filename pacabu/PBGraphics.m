@@ -19,11 +19,15 @@
 {
     [[UINavigationBar appearance] setBackgroundImage:[PBGraphics navigationBar] forBarMetrics:UIBarMetricsDefault];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"Verdana-Bold" size:17], UITextAttributeTextColor : COLORB, UITextAttributeTextShadowColor : COLORB}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:20], UITextAttributeTextColor : COLORB, UITextAttributeTextShadowColor : COLORB}];
     
-    [[UIBarButtonItem appearance] setTintColor:COLORB];
+    [[UIBarButtonItem appearance] setTintColor:COLORC];
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{UITextAttributeTextShadowColor: [UIColor clearColor]} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setBackgroundImage:nil
+                                            forState:UIControlStateNormal
+                                               style:UIBarButtonItemStyleDone
+                                          barMetrics:UIBarMetricsDefault];
     
     [[UITabBar appearance] setBackgroundImage:[PBGraphics tabBar]];
     

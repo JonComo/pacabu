@@ -44,6 +44,13 @@
 - (IBAction)new:(id)sender
 {
     PBActivity *newActivity = [PBActivity new];
+    [newActivity addObject:@"" forKey:@"description"];
+    [newActivity addObject:@"" forKey:@"title"];
+    [newActivity addObject:@"" forKey:@"dates"];
+    [newActivity addObject:@"" forKey:@"slots"];
+    [newActivity addObject:@"" forKey:@"donation"];
+    [newActivity addObject:@"" forKey:@"location"];
+    
     
     [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         NSLog(@"Saved");

@@ -72,8 +72,11 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifier = @"CellActivity";
-    
-    PBActivityCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    PBActivityCell *cell;
+    if (indexPath.row == 0) {
+        cell = [collectionViewDiscover dequeueReusableCellWithReuseIdentifier:@"CellMap" forIndexPath:indexPath];
+    }
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     [cell setup];
     
@@ -82,7 +85,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return cells.count;
+    return cells.count +1;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
