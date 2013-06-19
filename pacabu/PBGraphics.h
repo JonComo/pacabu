@@ -8,18 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#define COLORA [UIColor colorWithRed:0.933 green:0.647 blue:0.243 alpha:1.000]
-#define COLORB [UIColor colorWithRed:0.631 green:0.847 blue:0.733 alpha:1.000]
-#define COLORC [UIColor colorWithRed:0.933 green:0.914 blue:0.890 alpha:1.000]
-#define COLORD [UIColor colorWithRed:0.639 green:0.627 blue:0.608 alpha:1.000]
-#define COLORE [UIColor colorWithRed:0.118 green:0.106 blue:0.082 alpha:1.000]
+#define COLORA [UIColor colorWithRed:0.004 green:0.133 blue:0.063 alpha:1.000] //diff
+#define COLORB [UIColor colorWithRed:1.000 green:0.859 blue:0.369 alpha:1.000]
+#define COLORC [UIColor colorWithRed:0.933 green:0.725 blue:0.137 alpha:1.000]
+#define COLORD [UIColor colorWithRed:0.533 green:0.529 blue:0.404 alpha:1.000]
+#define COLORE [UIColor colorWithRed:0.204 green:0.329 blue:0.208 alpha:1.000]
 
 @interface PBGraphics : NSObject
 
 +(void)initGraphics;
 +(UIImage *)cellBorder;
-+(UIColor *)darkTexture;
-
-+(void)buttonDone:(UIButton *)button;
 
 @end

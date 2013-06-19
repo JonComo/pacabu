@@ -8,16 +8,13 @@
 
 #import "PBActivityCell.h"
 #import "PBGraphics.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation PBActivityCell
 
 -(void)setup
 {
     self.imageViewBackground.layer.masksToBounds = YES;
-    self.imageViewBackground.layer.cornerRadius = 20.0;
     [self.imageViewBackground setImage:[UIImage imageNamed:@"travel_1.jpg"]];
-    [self.imageViewBorder setImage:[PBGraphics cellBorder]];
 }
 
 -(UIViewController *)detailViewController

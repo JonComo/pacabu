@@ -29,9 +29,6 @@
     [super viewDidLoad];
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Blah" style:UIBarButtonItemStylePlain target:self action:@selector(shareActivity)];
     self.navigationItem.rightBarButtonItem = anotherButton;
-    
-    [self.view setBackgroundColor:[PBGraphics darkTexture]];
-    
 }
 
 - (void)shareActivity

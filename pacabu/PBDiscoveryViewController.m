@@ -41,8 +41,6 @@
     [collectionViewDiscover addSubview:refresh];
     
     [self findActivitiesCachePolicyCache:YES];
-    
-    [self.view setBackgroundColor:[PBGraphics darkTexture]];
 }
 
 - (void)didReceiveMemoryWarning

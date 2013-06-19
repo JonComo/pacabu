@@ -24,8 +24,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[PBGraphics darkTexture]];
-
 }
 
 - (void)callHost

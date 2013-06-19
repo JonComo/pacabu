@@ -22,6 +22,8 @@
     
     [PBGraphics initGraphics];
     
+    self.window.tintColor = COLORC;
+    
     return YES;
 }
 							
