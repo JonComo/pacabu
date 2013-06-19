@@ -13,8 +13,16 @@
 
 -(void)setup
 {
+    [PFImageView class];
+    
     self.imageViewBackground.layer.masksToBounds = YES;
-    [self.imageViewBackground setImage:[UIImage imageNamed:@"travel_1.jpg"]];
+    
+    NSArray *images = [self.object objectForKey:@"images"];
+    
+    PFFile *firstImage = [images firstObject];
+    
+    [self.imageViewBackground setFile:firstImage];
+    [self.imageViewBackground loadInBackground];
 }
 
 -(UIViewController *)detailViewController

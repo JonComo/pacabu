@@ -11,6 +11,8 @@
 
 @implementation PBActivity
 
+@synthesize images = _images;
+
 +(PBActivity *)new
 {
     PBActivity *newActivity = [[self alloc] initWithClassName:@"Activity"];
@@ -23,7 +25,25 @@
 
 -(void)saveCompletion:(void (^)(BOOL success))block
 {
-    [[PBParseManager sharedManager] saveObject:self completion:block];
+    __block int numToUpload = self.images.count;
+    
+    for (UIImage *image in self.images)
+    {
+        PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image, 0.7)];
+        
+        [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            
+            numToUpload --;
+            
+            [self addObject:imageFile forKey:@"images"];
+            
+            if (numToUpload == 0)
+            {
+                [[PBParseManager sharedManager] saveObject:self completion:block];
+            }
+            
+        }];
+    }
 }
 
 @end

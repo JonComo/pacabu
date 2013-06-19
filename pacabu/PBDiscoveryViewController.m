@@ -11,6 +11,7 @@
 #import "PBCell.h"
 #import "PBGraphics.h"
 #import "PBActivityCell.h"
+#import "PBActivity.h"
 
 @interface PBDiscoveryViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 {
@@ -70,12 +71,14 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *cellIdentifier = @"CellActivity";
-    PBActivityCell *cell;
-    if (indexPath.row == 0) {
-        cell = [collectionViewDiscover dequeueReusableCellWithReuseIdentifier:@"CellMap" forIndexPath:indexPath];
-    }
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    PFObject *object = cells[indexPath.row];
+    
+    PBActivityCell *cell;
+    
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    cell.object = object;
     [cell setup];
     
     return cell;
@@ -83,7 +86,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return cells.count +1;
+    return cells.count;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

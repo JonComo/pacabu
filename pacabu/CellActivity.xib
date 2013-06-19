@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4" userLabel="BackgroundImage">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4" userLabel="BackgroundImage" customClass="PFImageView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
@@ -42,7 +42,7 @@
                 <constraint firstItem="4" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="l2Z-fu-A1O"/>
             </constraints>
             <connections>
-                <outlet property="imageViewBackground" destination="4" id="22"/>
+                <outlet property="imageViewBackground" destination="4" id="ug6-oq-fVs"/>
             </connections>
         </collectionViewCell>
     </objects>
@@ -53,11 +53,14 @@
         <class className="PBActivityCell" superclassName="PBCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBActivityCell.h"/>
             <relationships>
-                <relationship kind="outlet" name="imageViewBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageViewBackground" candidateClass="PFImageView"/>
             </relationships>
         </class>
         <class className="PBCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PBCell.h"/>
+        </class>
+        <class className="PFImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFImageView.h"/>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>

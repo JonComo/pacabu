@@ -7,10 +7,13 @@
 //
 
 #import "PBCell.h"
+#import <Parse/Parse.h>
+
+@class PBActivity;
 
 @interface PBActivityCell : PBCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageViewBackground;
-
+@property (nonatomic, weak) PFObject *object;
+@property (weak, nonatomic) IBOutlet PFImageView *imageViewBackground;
 
 @end

@@ -10,6 +10,10 @@
 
 @interface PBActivity : PFObject
 
+@property (nonatomic, strong) NSMutableArray *images;
+
 +(PBActivity *)new;
+
+-(void)saveCompletion:(void (^)(BOOL success))block;
 
 @end
