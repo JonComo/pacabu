@@ -77,7 +77,7 @@
     }];
     
     NSTimer *loop;
-    loop = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loop:) userInfo:nil repeats:YES];
+    loop = [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(loop:) userInfo:nil repeats:YES];
 }
 
 -(void)loop:(NSTimer *)timer
@@ -94,7 +94,7 @@
             
             float angle = [JCMath angleFromPoint:view.frame.origin toPoint:subView.frame.origin];
             
-            CGPoint pushAmount = [JCMath pointFromPoint:CGPointZero pushedBy:-20 inDirection:angle];
+            CGPoint pushAmount = [JCMath pointFromPoint:CGPointZero pushedBy:-7 inDirection:angle];
             
             [childBehaviors addLinearVelocity:pushAmount forItem:view];
         }
