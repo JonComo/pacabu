@@ -55,8 +55,6 @@
 		86D9A4AA175AC6BB005758D9 /* PBDiscoveryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4A9175AC6BB005758D9 /* PBDiscoveryViewController.m */; };
 		86D9A4AD175AC86E005758D9 /* PBActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D9A4AC175AC86E005758D9 /* PBActivity.m */; };
 		86D9A4B4175AE1CE005758D9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D9A4B3175AE1CE005758D9 /* MapKit.framework */; };
-		86F4359B1772CFC00042359C /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86F435991772CFC00042359C /* MyParticle.sks */; };
-		86F4359C1772CFC00042359C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F4359A1772CFC00042359C /* spark.png */; };
 		86F54C4C177176CD006E6CEB /* PBNewActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F54C4B177176CD006E6CEB /* PBNewActivityViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -131,8 +129,6 @@
 		86D9A4AB175AC86E005758D9 /* PBActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBActivity.h; sourceTree = "<group>"; };
 		86D9A4AC175AC86E005758D9 /* PBActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBActivity.m; sourceTree = "<group>"; };
 		86D9A4B3175AE1CE005758D9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		86F435991772CFC00042359C /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MyParticle.sks; path = pacabu/MyParticle.sks; sourceTree = "<group>"; };
-		86F4359A1772CFC00042359C /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = pacabu/spark.png; sourceTree = "<group>"; };
 		86F54C4A177176CD006E6CEB /* PBNewActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBNewActivityViewController.h; sourceTree = "<group>"; };
 		86F54C4B177176CD006E6CEB /* PBNewActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBNewActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,8 +161,6 @@
 		33D9E09B17585FF800D4B561 = {
 			isa = PBXGroup;
 			children = (
-				86F435991772CFC00042359C /* MyParticle.sks */,
-				86F4359A1772CFC00042359C /* spark.png */,
 				33B0BFDF1762A0BF00AFA7DE /* travel_1.jpg */,
 				8632CD72175C166000A954D1 /* icon@2x.png */,
 				33D9E0AD17585FF800D4B561 /* pacabu */,
@@ -357,7 +351,6 @@
 				33D9E0C117585FF800D4B561 /* MainStoryboard.storyboard in Resources */,
 				8632CD78175C2ECE00A954D1 /* SecondaryStoryboard.storyboard in Resources */,
 				8632CD7A175C324400A954D1 /* CellActivity.xib in Resources */,
-				86F4359B1772CFC00042359C /* MyParticle.sks in Resources */,
 				8632CD7C175C336B00A954D1 /* CellMap.xib in Resources */,
 				8632CD89175C426700A954D1 /* cellBorder@2x.png in Resources */,
 				8632CD8B175C426700A954D1 /* icon@2x.png in Resources */,
@@ -366,7 +359,6 @@
 				86BA8D0C1760684B00B015F6 /* pack3.jpg in Resources */,
 				33B0BFE01762A0BF00AFA7DE /* travel_1.jpg in Resources */,
 				865C9A3D1772AC3600579FA8 /* Dynamics.storyboard in Resources */,
-				86F4359C1772CFC00042359C /* spark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
