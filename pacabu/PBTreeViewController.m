@@ -48,7 +48,6 @@
     [currentView addTarget:self action:@selector(dive:) forControlEvents:UIControlEventTouchUpInside];
     
     animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-    
     animator.delegate = self;
     
     grav = [UIGravityBehavior new];
@@ -57,8 +56,9 @@
     [grav addItem:currentView];
     
     collision = [[UICollisionBehavior alloc] init];
+    [collision setTranslatesReferenceBoundsIntoBoundary:YES];
     
-    centerSpring = [[UIAttachmentBehavior alloc] initWithItem:currentView attachedToAnchor:CGPointMake(320/2, 560/2)];
+    centerSpring = [[UIAttachmentBehavior alloc] initWithItem:currentView attachedToAnchor:CGPointMake(320/2, 460/2)];
     
     [collision addItem:currentView];
     
@@ -71,8 +71,8 @@
     
     [manager startAccelerometerUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
         
-        grav.xComponent = accelerometerData.acceleration.x / 7;
-        grav.yComponent = -accelerometerData.acceleration.y / 7;
+        grav.xComponent = accelerometerData.acceleration.x / 10;
+        grav.yComponent = -accelerometerData.acceleration.y / 10;
         
     }];
     
@@ -88,10 +88,13 @@
         {
             if (view == subView) continue;
             
+            float dist = [JCMath distanceBetweenPoint:view.frame.origin andPoint:subView.frame.origin sorting:NO];
+            
+            if (dist > 300) continue;
+            
             float angle = [JCMath angleFromPoint:view.frame.origin toPoint:subView.frame.origin];
             
-            CGPoint pushAmount = [JCMath pointFromPoint:CGPointZero pushedBy:-4 inDirection:angle];
-            
+            CGPoint pushAmount = [JCMath pointFromPoint:CGPointZero pushedBy:-20 inDirection:angle];
             
             [childBehaviors addLinearVelocity:pushAmount forItem:view];
         }
@@ -126,7 +129,7 @@
         [collision removeItem:item];
         [grav removeItem:item];
         
-        [UIView animateWithDuration:2 animations:^{
+        [UIView animateWithDuration:1 animations:^{
             item.alpha = 0;
         } completion:^(BOOL finished) {
             [item removeFromSuperview];
@@ -144,9 +147,9 @@
     
     [childViews removeAllObjects];
     
-    for (int i = 0; i<arc4random()%10; i++) {
+    for (int i = 0; i<25; i++) {
         
-        UIButton *child = [self buttonWithText:[NSString stringWithFormat:@"child %i", i] origin:CGPointMake(320/2 + arc4random()%100 - 50, 560/2 + arc4random()%100 - 50) size:20];
+        UIButton *child = [self buttonWithText:[NSString stringWithFormat:@"child %i", i] origin:CGPointMake(320/2 + arc4random()%100 - 50, 460/2 + arc4random()%100 - 50) size:20];
         
         [childViews addObject:child];
         
@@ -157,16 +160,18 @@
         [linksCollection addObject:link];
         
         [grav addItem:child];
-        [collision addItem:child];
+        //[collision addItem:child];
         
-        [link setLength:100];
+        [link setLength:80 + arc4random()%80];
+        [link setFrequency:4];
+        [link setDamping:2];
         
         [child addTarget:self action:@selector(dive:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     childBehaviors = [[UIDynamicItemBehavior alloc] initWithItems:childViews];
     [childBehaviors setAllowsRotation:NO];
-    
+    [childBehaviors setResistance:2];
     [animator addBehavior:childBehaviors];
 }
 
