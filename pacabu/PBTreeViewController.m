@@ -147,7 +147,7 @@
     
     [childViews removeAllObjects];
     
-    for (int i = 0; i<25; i++) {
+    for (int i = 0; i<arc4random()%10 + 1; i++) {
         
         UIButton *child = [self buttonWithText:[NSString stringWithFormat:@"child %i", i] origin:CGPointMake(320/2 + arc4random()%100 - 50, 460/2 + arc4random()%100 - 50) size:20];
         
@@ -160,7 +160,7 @@
         [linksCollection addObject:link];
         
         [grav addItem:child];
-        //[collision addItem:child];
+        [collision addItem:child];
         
         [link setLength:80 + arc4random()%80];
         [link setFrequency:4];
