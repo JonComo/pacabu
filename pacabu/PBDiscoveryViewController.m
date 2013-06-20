@@ -12,6 +12,7 @@
 #import "PBGraphics.h"
 #import "PBActivityCell.h"
 #import "PBActivity.h"
+#import "PBTreeViewController.h"
 
 @interface PBDiscoveryViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 {
@@ -42,6 +43,15 @@
     [collectionViewDiscover addSubview:refresh];
     
     [self findActivitiesCachePolicyCache:YES];
+}
+
+- (IBAction)loadTree:(id)sender
+{
+    UIStoryboard *dynamicSB = [UIStoryboard storyboardWithName:@"Dynamics" bundle:[NSBundle mainBundle]];
+    
+    PBTreeViewController *tree = [dynamicSB instantiateViewControllerWithIdentifier:@"dynamicsVC"];
+    
+    [self.navigationController pushViewController:tree animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

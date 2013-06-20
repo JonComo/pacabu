@@ -42,6 +42,10 @@
 		8632CD82175C380400A954D1 /* PBCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8632CD81175C380400A954D1 /* PBCell.m */; };
 		8632CD89175C426700A954D1 /* cellBorder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD84175C426700A954D1 /* cellBorder@2x.png */; };
 		8632CD8B175C426700A954D1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8632CD86175C426700A954D1 /* icon@2x.png */; };
+		865C9A381772A63D00579FA8 /* PBGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865C9A371772A63D00579FA8 /* PBGridViewController.m */; };
+		865C9A3B1772AC0A00579FA8 /* PBTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865C9A3A1772AC0A00579FA8 /* PBTreeViewController.m */; };
+		865C9A3D1772AC3600579FA8 /* Dynamics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865C9A3C1772AC3600579FA8 /* Dynamics.storyboard */; };
+		865C9A401772C32B00579FA8 /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 865C9A3F1772C32B00579FA8 /* JCMath.m */; };
 		86BA8D0A1760684B00B015F6 /* pack1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8D071760684B00B015F6 /* pack1.jpg */; };
 		86BA8D0B1760684B00B015F6 /* pack2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8D081760684B00B015F6 /* pack2.jpg */; };
 		86BA8D0C1760684B00B015F6 /* pack3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8D091760684B00B015F6 /* pack3.jpg */; };
@@ -104,6 +108,13 @@
 		8632CD81175C380400A954D1 /* PBCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCell.m; sourceTree = "<group>"; };
 		8632CD84175C426700A954D1 /* cellBorder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellBorder@2x.png"; sourceTree = "<group>"; };
 		8632CD86175C426700A954D1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		865C9A361772A63D00579FA8 /* PBGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBGridViewController.h; sourceTree = "<group>"; };
+		865C9A371772A63D00579FA8 /* PBGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBGridViewController.m; sourceTree = "<group>"; };
+		865C9A391772AC0A00579FA8 /* PBTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTreeViewController.h; sourceTree = "<group>"; };
+		865C9A3A1772AC0A00579FA8 /* PBTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTreeViewController.m; sourceTree = "<group>"; };
+		865C9A3C1772AC3600579FA8 /* Dynamics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dynamics.storyboard; sourceTree = "<group>"; };
+		865C9A3E1772C32B00579FA8 /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
+		865C9A3F1772C32B00579FA8 /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
 		86BA8D071760684B00B015F6 /* pack1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack1.jpg; sourceTree = "<group>"; };
 		86BA8D081760684B00B015F6 /* pack2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack2.jpg; sourceTree = "<group>"; };
 		86BA8D091760684B00B015F6 /* pack3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack3.jpg; sourceTree = "<group>"; };
@@ -190,10 +201,13 @@
 		33D9E0AD17585FF800D4B561 /* pacabu */ = {
 			isa = PBXGroup;
 			children = (
+				865C9A3E1772C32B00579FA8 /* JCMath.h */,
+				865C9A3F1772C32B00579FA8 /* JCMath.m */,
 				8632CD83175C426700A954D1 /* media */,
 				33D9E0B617585FF800D4B561 /* PBAppDelegate.h */,
 				33D9E0B717585FF800D4B561 /* PBAppDelegate.m */,
 				33D9E0BF17585FF800D4B561 /* MainStoryboard.storyboard */,
+				865C9A3C1772AC3600579FA8 /* Dynamics.storyboard */,
 				8632CD77175C2ECE00A954D1 /* SecondaryStoryboard.storyboard */,
 				86D9A49B175AB778005758D9 /* Model */,
 				33D9E0E11758670000D4B561 /* View */,
@@ -241,6 +255,10 @@
 				8632CD81175C380400A954D1 /* PBCell.m */,
 				86F54C4A177176CD006E6CEB /* PBNewActivityViewController.h */,
 				86F54C4B177176CD006E6CEB /* PBNewActivityViewController.m */,
+				865C9A361772A63D00579FA8 /* PBGridViewController.h */,
+				865C9A371772A63D00579FA8 /* PBGridViewController.m */,
+				865C9A391772AC0A00579FA8 /* PBTreeViewController.h */,
+				865C9A3A1772AC0A00579FA8 /* PBTreeViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -340,6 +358,7 @@
 				86BA8D0B1760684B00B015F6 /* pack2.jpg in Resources */,
 				86BA8D0C1760684B00B015F6 /* pack3.jpg in Resources */,
 				33B0BFE01762A0BF00AFA7DE /* travel_1.jpg in Resources */,
+				865C9A3D1772AC3600579FA8 /* Dynamics.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,12 +377,15 @@
 				86D9A49E175AB904005758D9 /* PBParseManager.m in Sources */,
 				86D9A4A4175ABAC8005758D9 /* JCAlertViewManager.m in Sources */,
 				86D9A4AA175AC6BB005758D9 /* PBDiscoveryViewController.m in Sources */,
+				865C9A381772A63D00579FA8 /* PBGridViewController.m in Sources */,
 				86D9A4AD175AC86E005758D9 /* PBActivity.m in Sources */,
 				8632CD76175C2DD200A954D1 /* PBGraphics.m in Sources */,
 				3308A9A6175C2F31004B5F16 /* PBActivityDetailViewController.m in Sources */,
 				3308A9A9175C32AB004B5F16 /* PBBillSummaryViewController.m in Sources */,
 				86F54C4C177176CD006E6CEB /* PBNewActivityViewController.m in Sources */,
+				865C9A401772C32B00579FA8 /* JCMath.m in Sources */,
 				8632CD7F175C36B800A954D1 /* PBActivityCell.m in Sources */,
+				865C9A3B1772AC0A00579FA8 /* PBTreeViewController.m in Sources */,
 				8632CD82175C380400A954D1 /* PBCell.m in Sources */,
 				3308A9AC175C3C84004B5F16 /* PBHostDetailViewController.m in Sources */,
 				3308A9B8175C4703004B5F16 /* PBCityListViewController.m in Sources */,
@@ -451,6 +473,7 @@
 		33D9E0C817585FF800D4B561 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -467,6 +490,7 @@
 		33D9E0C917585FF800D4B561 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
