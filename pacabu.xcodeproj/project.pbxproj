@@ -46,6 +46,7 @@
 		865C9A3B1772AC0A00579FA8 /* PBTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865C9A3A1772AC0A00579FA8 /* PBTreeViewController.m */; };
 		865C9A3D1772AC3600579FA8 /* Dynamics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865C9A3C1772AC3600579FA8 /* Dynamics.storyboard */; };
 		865C9A401772C32B00579FA8 /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 865C9A3F1772C32B00579FA8 /* JCMath.m */; };
+		86B52499177985A500BDDC26 /* PBTreeRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B52498177985A500BDDC26 /* PBTreeRenderView.m */; };
 		86BA8D0A1760684B00B015F6 /* pack1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8D071760684B00B015F6 /* pack1.jpg */; };
 		86BA8D0B1760684B00B015F6 /* pack2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8D081760684B00B015F6 /* pack2.jpg */; };
 		86BA8D0C1760684B00B015F6 /* pack3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86BA8D091760684B00B015F6 /* pack3.jpg */; };
@@ -115,6 +116,8 @@
 		865C9A3C1772AC3600579FA8 /* Dynamics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dynamics.storyboard; sourceTree = "<group>"; };
 		865C9A3E1772C32B00579FA8 /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
 		865C9A3F1772C32B00579FA8 /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
+		86B52497177985A500BDDC26 /* PBTreeRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTreeRenderView.h; sourceTree = "<group>"; };
+		86B52498177985A500BDDC26 /* PBTreeRenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTreeRenderView.m; sourceTree = "<group>"; };
 		86BA8D071760684B00B015F6 /* pack1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack1.jpg; sourceTree = "<group>"; };
 		86BA8D081760684B00B015F6 /* pack2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack2.jpg; sourceTree = "<group>"; };
 		86BA8D091760684B00B015F6 /* pack3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pack3.jpg; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				86D9A4AC175AC86E005758D9 /* PBActivity.m */,
 				8632CD74175C2DD200A954D1 /* PBGraphics.h */,
 				8632CD75175C2DD200A954D1 /* PBGraphics.m */,
+				86B52497177985A500BDDC26 /* PBTreeRenderView.h */,
+				86B52498177985A500BDDC26 /* PBTreeRenderView.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				3308A9A6175C2F31004B5F16 /* PBActivityDetailViewController.m in Sources */,
 				3308A9A9175C32AB004B5F16 /* PBBillSummaryViewController.m in Sources */,
 				86F54C4C177176CD006E6CEB /* PBNewActivityViewController.m in Sources */,
+				86B52499177985A500BDDC26 /* PBTreeRenderView.m in Sources */,
 				865C9A401772C32B00579FA8 /* JCMath.m in Sources */,
 				8632CD7F175C36B800A954D1 /* PBActivityCell.m in Sources */,
 				865C9A3B1772AC0A00579FA8 /* PBTreeViewController.m in Sources */,

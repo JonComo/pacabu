@@ -9,6 +9,7 @@
 #import "PBTreeViewController.h"
 #import "PBGraphics.h"
 #import "JCMath.h"
+#import "PBTreeRenderView.h"
 
 @import CoreMotion;
 
@@ -21,12 +22,16 @@
     NSMutableArray *childViews;
     NSMutableSet *linksCollection;
     
+    UIAttachmentBehavior *pullSpring;
+    
     UIGravityBehavior *grav;
     
     UIAttachmentBehavior *centerSpring;
     UIDynamicItemBehavior *childBehaviors;
     
     CMMotionManager *manager;
+    
+    IBOutlet PBTreeRenderView *treeRenderView;
 }
 
 @end
@@ -99,25 +104,22 @@
             [childBehaviors addLinearVelocity:pushAmount forItem:view];
         }
     }
+    
+    treeRenderView.currentView = currentView;
+    treeRenderView.attachmentItems = animator.behaviors;
+    
+    [treeRenderView setNeedsDisplay];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    /*
     UITouch *touch = [touches anyObject];
     
     CGPoint location = [touch locationInView:self.view];
     
-    float dist = FLT_MAX;
-    
-    for (UIView *view in self.view.subviews)
-    {
-        float testDist = sqrtf( powf(view.frame.origin.x - location.x, 2) + powf(view.frame.origin.y - location.y, 2) );
-        
-        if (testDist < dist)
-        {
-            dist = testDist;
-        }
-    }
+    centerSpring.anchorPoint = location;
+     */
 }
 
 -(void)dive:(UIButton *)sender
@@ -181,6 +183,7 @@
     button.tintColor = COLORA;
     [button setTitleColor:COLORA forState:UIControlStateNormal];
     
+    [button addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panButton:)]];
     
     [button setFrame:CGRectMake(origin.x, origin.y, size * 3, size)];
     [button setTitle:text forState:UIControlStateNormal];
@@ -188,6 +191,29 @@
     [button.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:size]];
     
     return button;
+}
+
+-(void)panButton:(UIPanGestureRecognizer *)pan
+{
+    CGPoint position = [pan locationInView:self.view];
+    
+    if (pan.view == self.view) return;
+    
+    if (pan.view == currentView)
+    {
+        centerSpring.anchorPoint = position;
+        return;
+    }
+    
+    if (!pullSpring || ![pullSpring.items containsObject:pan.view])
+    {
+        pullSpring = nil;
+        pullSpring = [[UIAttachmentBehavior alloc] initWithItem:pan.view attachedToAnchor:position];
+        [animator addBehavior:pullSpring];
+    }
+    
+    pullSpring.anchorPoint = position;
+        
 }
 
 -(void)dynamicAnimatorDidPause:(UIDynamicAnimator *)animator
