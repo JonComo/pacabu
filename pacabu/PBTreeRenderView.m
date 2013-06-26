@@ -37,14 +37,18 @@
             
             UIAttachmentBehavior *attach = (UIAttachmentBehavior *)attachmentItem;
             
-            CGContextMoveToPoint(ref, self.currentView.frame.origin.x, self.currentView.frame.origin.y);
-            
             UIView *item;
             
             if (attach.items.count != 0)
                 item = attach.items[0];
             
-            CGContextAddLineToPoint(ref, item.frame.origin.x, item.frame.origin.y);
+            CGPoint startPoint = CGPointMake(self.currentView.frame.origin.x + self.currentView.frame.size.width/2, self.currentView.frame.origin.y + self.currentView.frame.size.height/2);
+            
+            CGPoint endPoint = CGPointMake(item.frame.origin.x + item.frame.size.width/2, item.frame.origin.y + item.frame.size.height/2);
+            
+            CGContextMoveToPoint(ref, startPoint.x, startPoint.y);
+            
+            CGContextAddLineToPoint(ref, item.frame.origin.x + item.frame.size.width/2, item.frame.origin.y + item.frame.size.height/2);
             
             
             CGContextStrokePath(ref);

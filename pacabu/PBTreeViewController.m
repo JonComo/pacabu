@@ -10,7 +10,7 @@
 #import "PBGraphics.h"
 #import "JCMath.h"
 #import "PBTreeRenderView.h"
-
+@import QuartzCore;
 @import CoreMotion;
 
 @interface PBTreeViewController () <UIDynamicAnimatorDelegate>
@@ -76,10 +76,12 @@
     
     [manager startAccelerometerUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
         
-        grav.xComponent = accelerometerData.acceleration.x / 10;
-        grav.yComponent = -accelerometerData.acceleration.y / 10;
+        grav.xComponent = accelerometerData.acceleration.x * 3;
+        grav.yComponent = -accelerometerData.acceleration.y * 3;
         
     }];
+    
+    [self.view addGestureRecognizer:[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)]];
     
     NSTimer *loop;
     loop = [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(loop:) userInfo:nil repeats:YES];
@@ -111,6 +113,18 @@
     [treeRenderView setNeedsDisplay];
 }
 
+-(void)pinch:(UIPinchGestureRecognizer *)pinch
+{
+    float amount = -100 + pinch.scale * 200;
+    
+    for (UIAttachmentBehavior *link in linksCollection){
+        [link setLength:ABS(amount)];
+    }
+    
+    if (amount < -20 && pinch.state == UIGestureRecognizerStateEnded)
+        [self dive:currentView];
+}
+
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     /*
@@ -131,15 +145,14 @@
         [collision removeItem:item];
         [grav removeItem:item];
         
-        [UIView animateWithDuration:1 animations:^{
+        [UIView animateWithDuration:0.3 animations:^{
             item.alpha = 0;
         } completion:^(BOOL finished) {
             [item removeFromSuperview];
         }];
     }
     
-    for (__strong UIAttachmentBehavior *link in linksCollection)
-    {
+    for (__strong UIAttachmentBehavior *link in linksCollection){
         [animator removeBehavior:link];
         link = nil;
     }
@@ -189,6 +202,8 @@
     [button setTitle:text forState:UIControlStateNormal];
     
     [button.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:size]];
+    
+    [button setBackgroundColor:[UIColor whiteColor]];
     
     return button;
 }
