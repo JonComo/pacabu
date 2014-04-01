@@ -76,8 +76,8 @@
     
     [manager startAccelerometerUpdatesToQueue:[[NSOperationQueue alloc] init] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
         
-        grav.xComponent = accelerometerData.acceleration.x * 3;
-        grav.yComponent = -accelerometerData.acceleration.y * 3;
+//        grav.xComponent = accelerometerData.acceleration.x * 3;
+//        grav.yComponent = -accelerometerData.acceleration.y * 3;
         
     }];
     
